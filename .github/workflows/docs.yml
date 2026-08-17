@@ -16,7 +16,7 @@ jobs:
         uses: dpower12/properdocs-deploy-gh-pages@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CUSTOM_DOMAIN: dpower12.github.io
+          # CUSTOM_DOMAIN: dpower12.github.io
           CONFIG_FILE: properdocs.yml
           EXTRA_PACKAGES: build-base
           # GITHUB_DOMAIN: github.myenterprise.com
