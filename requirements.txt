@@ -1,0 +1,7 @@
+properdocs
+mkdocs-material
+mkdocs-git-authors-plugin
+mkdocs-git-revision-date-localized-plugin
+mkdocs-literate-nav
+mkdocs-include-markdown-plugin
+mkdocs-redirects
