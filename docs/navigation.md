@@ -4,6 +4,8 @@ search:
 ---
 - [Home](index.md)
 - [Table structure](./api/table_structure.md)
-- [Item pools](./api/item_pools.md)
-- [Item tags](./api/item_tags.md)
 - [Adding a Character](./api/adding_a_character.md)
+- Items
+	- [Item pools](./api/items/item_pools.md)
+	- [Item tags](./api/items/item_tags.md)
+	- [Turnover shops](./api/items/turnover_shops.md)
