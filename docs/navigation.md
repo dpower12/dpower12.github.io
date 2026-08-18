@@ -3,11 +3,5 @@ search:
     boost: -999
 ---
 - [Home](index.md)
-- Characters
-    - [Placeholder](./api/placeholder.md)
-- Pickups
-    - [Placeholder](./api/placeholder.md)
-- Beggars & Machines
-    - [Placeholder](./api/placeholder.md)
-- Mechanics
-    - [Placeholder](./api/placeholder.md)
+- [Table structure](./api/table_structure.md)
+- [Adding a Character](./api/adding_a_character.md)
