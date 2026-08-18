@@ -9,3 +9,4 @@ search:
 	- [Item pools](./api/items/item_pools.md)
 	- [Item tags](./api/items/item_tags.md)
 	- [Turnover shops](./api/items/turnover_shops.md)
+- [ModCallbacks](./api/mod_callbacks.md)
