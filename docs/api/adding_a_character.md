@@ -1,16 +1,16 @@
-In addition to the work-in-progress set of tarnished characters for the vanilla cast, Epiphany supports adding tarnished versions of modded characters. This document covers everything you'd need to know about adding and configuring your own tarnished character.
+In addition to the work-in-progress set of tarnished characters for the vanilla cast, Epiphany supports adding tarnished versions of modded characters. This article covers everything you'd need to know about adding and configuring your own tarnished character.
 
 ## Setting up your character
 
 This article assumes you know how to create a modded character to begin with. If for some reason you don't, see [this page on Isaac Blueprints](https://isaacblueprints.com/tutorials/crash_course/character/).
 
-Setting up your character entry should be identical to making a normal modded character. All the actions that handle making it a tarnished character are done through Lua, not the XML files, but there will be additions needed there as well. For this document, we will be creating a tarnished version of a character named "?".
+Setting up your character entry should be identical to making a normal modded character. All the actions that handle making it a tarnished character are done through Lua, not the XML files, but there will be additions needed there as well. For this article, we will be creating a tarnished version of a character named "?".
 
 Before Wave 8, you could create a tarnished character on its lonesome without the requirement of a normal or tainted version. With the implementation of tarnished characters directly on the main menu, it overrides an existing character on the menu. As such, **you must have at least one other character entry to add a tarnished character**. This may change in the future, but for now you need a character that will show up on the main menu at all times.
 
 ### Achievements
 
-Due to how tarnished characters are implemented to be accessible from the main menu, **you must add at least one achievement tied to your character**, regardless of intention. This is so that your character can be hidden from the main menu but accessible in the co-op menu. In most cases, however, you will want to make your tarnished unlockable, and you will require two achievements. For the purposes of the document, we will be making Tarnished Guppy unlockable.
+Due to how tarnished characters are implemented to be accessible from the main menu, **you must add at least one achievement tied to your character**, regardless of intention. This is so that your character can be hidden from the main menu but accessible in the co-op menu. In most cases, however, you will want to make your tarnished unlockable, and you will require two achievements. For the purposes of the article, we will be making Tarnished Guppy unlockable.
 
 ```xml
 <achievements gfxroot="gfx/ui/achievement/">
