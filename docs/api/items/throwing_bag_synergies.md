@@ -1,3 +1,5 @@
+{% include-markdown "hidden/unfinished_notice.md" start="<!-- start -->" end="<!-- end -->" %}
+
 [Throwing Bag](https://tboiepiphany.wiki.gg/wiki/Throwing_Bag) is an active item that serves as [Tarnished Cain](https://tboiepiphany.wiki.gg/wiki/Tarnished_Cain)'s primary method of attacking, throwing the bag and needing to collect it to attack again. Throwing Bag can absorb two items in order to make additional bags to throw, each item contributing a unique effect to the bag it was crafted into. If the item is collected on its own, it may also provide a unique synergy to all of the player's bags.
 
 Epiphany's API allows for adding your own custom synergies for Throwing Bag. This article will cover the large array of options available for customizing its effect.
@@ -9,53 +11,53 @@ While Throwing Bag has unique synergies for many notable items, it also has a wi
 ???- info "Throwing Bag generic synergies"
 	| string ID | Theme |
 	|:--|:--|
-	|`angel_bagged`				|Angel|
+	|`angel_bagged`				|Angelic<br>**Auto-includes items with the `angel` tag**|
 	|`bait_bagged`				|Inflicts the Bait status|
-	|`battery_bagged`			|Battery|
+	|`battery_bagged`			|Battery<br>**Auto-includes items with the `battery` tag**|
 	|`birthing_bagged`			|Pregnancy, birth, fetuses|
 	|`blackhole_bagged`			|Black hole, void, abyss|
-	|`bomb_bagged`				|Bombs|
+	|`bomb_bagged`				|Bomb synergies|
 	|`bone_bagged`				|Bones|
-	|`book_bagged`				|Books|
+	|`book_bagged`				|Books<br>**Auto-includes items with the `book` tag**|
 	|`boss_bagged`				|Represents a boss|
 	|`charm_bagged`				|Inflicts the Charm status|
 	|`childhood_bagged`			|Childhood|
 	|`confusion_bagged`			|Inflicts the Confusion status|
 	|`cursed_bagged`			|Voodoo, sacrifice, rituals, shadows|
-	|`devil_bagged`				|Devil|
-	|`dice_bagged`				|Dice|
-	|`drug_bagged`				|Pills, mushrooms, syringes|
+	|`devil_bagged`				|Devil<br>**Auto-includes items with the `devil` tag**|
+	|`dice_bagged`				|Demonic|
+	|`drug_bagged`				|Pills, mushrooms, syringes<br>**Please see the note at the bottom of the table.**|
 	|`explorer_bagged`			|Exploration, maps, traversal|
-	|`familiar_bagged`			|Baby-like familiars. **Items with the baby tag contribute to this synergy automatically**.|
+	|`familiar_bagged`			|Baby-like familiars<br>**Items with the baby tag contribute to this synergy automatically**.|
 	|`fart_bagged`				|Triggers fart effects|
 	|`fate_bagged`				|Blue Baby, Isaac's death|
 	|`fear_bagged`				|Inflicts the Fear status|
 	|`fertilizer_bagged`		|Flowers, plants, dirt|
 	|`fire_bagged`				|Inflicts the Burn status, fire, flame, hot|
-	|`flies_bagged`				|Is a fly, or spawns flies|
+	|`flies_bagged`				|Is a fly, or spawns flies<br>**Items with the fly tag contribute to this synergy automatically**.|
 	|`gamer_bagged`				|Gamer culture and other games|
 	|`glitched_bagged`			|Glitchy|
 	|`golden_bagged`			|Gold, money, shops, greed|
-	|`guppy_bagged`				|Guppy parts|
+	|`guppy_bagged`				|Guppy parts<br>**Items with the guppy tag contribute to this synergy automatically**.|
 	|`harbinger_bagged`			|Horsemen of the Apocalypse|
 	|`homing_bagged`			|Grants homing tears|
 	|`isack_bagged`				|Isaac, bums, has significant importance to Isaac's life, Option items|
 	|`latex_bagged`				|Latex, razor|
 	|`lotto_bagged`				|Lottery, gambling|
 	|`luck_bagged`				|Increases Isaac's luck stat|
-	|`lunch_bagged`				|Low-quality food|
+	|`lunch_bagged`				|Low-quality food<br>**Items with the food tag contribute to this synergy automatically**.|
 	|`magnet_bagged`			|Magnet, magnetism, inflicts Magnetized status|
 	|`meal_bagged`				|High-quality food|
 	|`medical_bagged`			|Blood, bandages, medicine, surgical tools, medical conditions|
 	|`generic_milk_bagged`		|Milk|
-	|`mom_bagged`				|Mom|
-	|`mystic_bagged`			|Planetarium, Zodiac signs, runes, fortune telling|
+	|`mom_bagged`				|Mom<br>**Items with the mom tag contribute to this synergy automatically**.|
+	|`mystic_bagged`			|Planetarium, Zodiac signs, runes, fortune telling<br>**Items with the stars tag contribute to this synergy automatically**.|
 	|`organ_bagged`				|Organ|
 	|`paper_bagged`				|Paper, card|
 	|`petrifying_bagged`		|Inflicts the Petrify status|
 	|`piercing_bagged`			|Grants Isaac piercing tears|
 	|`poison_bagged`			|Inflicts the Poison status|
-	|`poop_bagged`				|Poop|
+	|`poop_bagged`				|Poop<br>**Items with the poop tag contribute to this synergy automatically**.|
 	|`punching_bagged`			|Violence, Samson|
 	|`purse_bagged`				|Can be found inside a purse|
 	|`rock_bagged`				|Rock, and stone|
@@ -63,10 +65,19 @@ While Throwing Bag has unique synergies for many notable items, it also has a wi
 	|`sharps_bagged`			|Sharp|
 	|`slow_bagged`				|Inflicts the Slow status|
 	|`spectral_bagged`			|Grants Isaac spectral tears|
-	|`spider_bagged`			|Is a spider, or spawns spiders|
+	|`spider_bagged`			|Is a spider, or spawns spiders<br>**Items with the spider tag contribute to this synergy automatically**.|
 	|`spirit_bagged`			|Spirits, ghosts, souls|
+	|`sanctum_spiritus_bagged`	|Holy spirits, significant holy items|
 	|`tool_bagged`				|Tools for various purposes|
 	|`tough_bagged`				|Heavy protection|
+
+???- note "drug_bagged synergies"
+	No items are added to this tag directly, instead having its own synergy to change the `burst_color` variable based on the drug, and assigning `drug_bagged` as its parent. When adding to this synergy, use one of the following group tags or create your own with a unique color:
+
+	- `whitedrug`
+	- `reddrug`
+	- `momspills`
+	- `whitepills`
 
 ## Throwing Bag tables
 
@@ -108,7 +119,7 @@ For a Bag currently being swung.
 	|Mass				| number		| Mass of the bag |
 
 ### ThrownBagData
-For a Bag that has been thrown. Shares all variables from [SwingingBagData](./throwing_bag_synergies.md#swingingbagdata).
+For a Bag that has been thrown. Shares all variables from [SwingingBagData](#swingingbagdata).
 
 ???- info "Variables"
 	|Variable Name|Possible values|Description|
@@ -181,3 +192,7 @@ For a Bag that has been thrown. Shares all variables from [SwingingBagData](./th
 	|:--|:--|:--|
 	|BagsData 	  | BagsInfo[]  ||
 	|CurrentIndex | integer 	| Index of the currently used bag queue in BagsData array |
+
+## Creating custom synergies
+
+This is the part where I'd say something swagilicious
