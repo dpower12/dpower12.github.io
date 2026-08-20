@@ -1,0 +1,1243 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../adding_a_character/">
+      
+      
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Table structure - Epiphany API Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    
+    <meta property="og:site_name" content="Epiphany API Docs"  />
+<meta property="og:image" content="https://isaacblueprints.com/tutorials/assets/isaacblueprints.png" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:description" content=" test description." />
+
+<meta property="og:url" content="None" />
+<meta name="theme-color" content="#566c8a" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#epiphanycharacter" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Epiphany API Docs" class="md-header__button md-logo" aria-label="Epiphany API Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Epiphany API Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Table structure
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Epiphany API Docs" class="md-nav__button md-logo" aria-label="Epiphany API Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
+
+    </a>
+    Epiphany API Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Table structure
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Table structure
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanycharacter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Character
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanyitem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Item
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanytrinket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Trinket
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanycard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Card
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanyessence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Essence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanycapsule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Capsule
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanyslot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Slot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanypickup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Pickup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanygrid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Grid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanynpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Npc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanychallenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Challenge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanypickupprice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.PickupPrice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanyrooms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Rooms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanymiscfamiliar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.MiscFamiliar
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding_a_character/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding a Character
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Items
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Items
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../items/item_pools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Item pools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../items/item_tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Item tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../items/turnover_shops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Turnover shops
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../items/throwing_bag_synergies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Throwing Bag
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mod_callbacks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ModCallbacks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanycharacter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Character
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanyitem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Item
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanytrinket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Trinket
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanycard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Card
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanyessence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Essence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanycapsule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Capsule
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanyslot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Slot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanypickup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Pickup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanygrid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Grid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanynpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Npc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanychallenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Challenge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanypickupprice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.PickupPrice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanyrooms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.Rooms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epiphanymiscfamiliar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epiphany.MiscFamiliar
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Table structure</h1>
+
+<p>Everything for Epiphany is accessed through the <code>Epiphany</code> global. From here, it branches off into different tables that contain the rest of the mod, accessed as <code>Epiphany.VARIABLE_NAME</code>.</p>
+<p>Below are all the main tables Epiphany holds that a modder may need to access, the tables they hold, and the variables that can be consistently found through all of them. Further information on these tables or others not listed here should be found by searching through the game's codebase directly.</p>
+<h2 id="epiphanycharacter">Epiphany.Character<a class="headerlink" href="#epiphanycharacter" title="Permanent link">⚓︎</a></h2>
+<details class="info" open="open">
+<summary>PlayerTypes</summary>
+<p>For accessing the player type ID of a character, use <code>Epiphany.PlayerType.CHARACTER_NAME</code>. The values here apply to PlayerType as well.</p>
+<p>The exceptions to this are different forms of Tarnished Judas, accessed through JUDAS_1 (Scorched), JUDAS_2 (Half Scorched), JUDAS_4 (Half Fractured), JUDAS_5 (Fractured).</p>
+</details>
+<ul>
+<li>BETHANY</li>
+<li>BLUEBABY</li>
+<li>CAIN</li>
+<li>EDEN</li>
+<li>ISAAC</li>
+<li>JUDAS</li>
+<li>KEEPER</li>
+<li>LOST</li>
+<li>MAGDALENE</li>
+<li>SAMSON</li>
+</ul>
+<h2 id="epiphanyitem">Epiphany.Item<a class="headerlink" href="#epiphanyitem" title="Permanent link">⚓︎</a></h2>
+<details class="info" open="open">
+<summary>Item structure</summary>
+<p>The following variables may be accessed through <code>Epiphany.Item</code>. Variables that may not be present are marked with *:</p>
+<ul>
+<li><code>ID</code>: Holds the CollectibleType ID.</li>
+<li><code>ID2, ID3, AllIDs</code>*: Exclusive to Divine Remnants, as its levels are registered as three separate items. <code>ID2</code> and <code>ID3</code> are the second and third levels of Divine Remnants. <code>AllIDs</code> is an array of all three IDs.</li>
+<li><code>FAMILIAR</code>*: Holds the FamiliarVariant, if a familiar is involved.</li>
+</ul>
+</details>
+<ul>
+<li>ACTIVE_SACK</li>
+<li>AIR_CONDITIONER</li>
+<li>ANAL_FISSURE</li>
+<li>ANCIENT_ONES_MARK</li>
+<li>ANKLE_WEIGHTS</li>
+<li>BAD_COMPANY</li>
+<li>BLEEDING_HEART</li>
+<li>BLIGHTED_DICE</li>
+<li>BLIGHTED_PHOTO</li>
+<li>BOMB_VOUCHER</li>
+<li>BOTTLED_SPIRITS</li>
+<li>BRAIN_IN_A_JAR</li>
+<li>BROKEN_HALO</li>
+<li>BROKEN_ORB</li>
+<li>BROKEN_PILLAR</li>
+<li>BURNING_PASSION</li>
+<li>CARDBOARD_CUTOUT</li>
+<li>CARDIAC_ARREST</li>
+<li>CHANCE_CUBE</li>
+<li>CLOT_BOMBS</li>
+<li>COIN_CASE</li>
+<li>CORPUS_HERMETICUM</li>
+<li>CORPUS_VOCANDI</li>
+<li>CRIMSON_BANDANA</li>
+<li>D5</li>
+<li>DADS_TOOLBOX</li>
+<li>DARK_ROCK</li>
+<li>DEBUG</li>
+<li>DELILAHS_RAZOR</li>
+<li>DESCENT</li>
+<li>DIMENSIONAL_KEY</li>
+<li>DIVINE_REMNANTS</li>
+<li>DOORKNOB</li>
+<li>EMPTY_DECK</li>
+<li>FERRYMANS_OAR</li>
+<li>FINAL_WISHES</li>
+<li>FIRE_OF_ALEXANDRIA</li>
+<li>FIRST_PAGE</li>
+<li>FLY_TRAP</li>
+<li>GAMBITS_DICE</li>
+<li>GEOCACHE</li>
+<li>GIANT_PUFFBALL</li>
+<li>GLITCHED_PHOTO</li>
+<li>GLITCH_ITEM_0</li>
+<li>GLITCH_ITEM_1</li>
+<li>GLITCH_ITEM_2</li>
+<li>GLITCH_ITEM_3</li>
+<li>GLITCH_ITEM_4</li>
+<li>GOLDEN_COBWEB</li>
+<li>KAEK</li>
+<li>KILLER_INSTINCT</li>
+<li>KINS_CURSE</li>
+<li>LIL_GUPPY</li>
+<li>LINEN_SHROUD</li>
+<li>LIQUID_NITROGEN</li>
+<li>LIVING_BLOOD</li>
+<li>MIMICRY</li>
+<li>MIX</li>
+<li>MOMS_HUG</li>
+<li>MOTHERS_SHADOW</li>
+<li>MYOPIA</li>
+<li>NOTHING</li>
+<li>OLD_KNIFE</li>
+<li>PARTY_POPPER</li>
+<li>PILE_OF_NOTES</li>
+<li>PLASMA_BALL</li>
+<li>PORTABLE_DICE_MACHINE</li>
+<li>PRINTER</li>
+<li>PROMO_TOY</li>
+<li>RELATIVE_ROBBY</li>
+<li>REMEMBRANCE</li>
+<li>RETRIBUTION</li>
+<li>REVOLT</li>
+<li>ROTTEN_CORE</li>
+<li>SAVAGE_CHAINS</li>
+<li>SEGMENTATION_FAULT</li>
+<li>SHADOW_REMNANTS</li>
+<li>SHARP_ROCK</li>
+<li>SHRED</li>
+<li>STOCK_FLUCTUATION</li>
+<li>SURPRISE_BOX</li>
+<li>THE_BOX</li>
+<li>THIRTY_PIECES_OF_SILVER</li>
+<li>THROBBING_CROWN</li>
+<li>THROWING_BAG</li>
+<li>TRUE_LOVE</li>
+<li>TURNOVER</li>
+<li>WARM_COAT</li>
+<li>WEIRD_HEART</li>
+<li>WOODEN_STAKE</li>
+<li>WOOLEN_CAP</li>
+<li>WORK_IN_PROGRESS</li>
+<li>ZIP_BOMBS</li>
+</ul>
+<h2 id="epiphanytrinket">Epiphany.Trinket<a class="headerlink" href="#epiphanytrinket" title="Permanent link">⚓︎</a></h2>
+<details class="info" open="open">
+<summary>TrinketType</summary>
+<p>The TrinketType ID is accessed through <code>Epiphany.Trinket.TRINKET_NAME.ID</code>.</p>
+</details>
+<ul>
+<li>BETHS_ORDEAL</li>
+<li>BLACK_KEY</li>
+<li>CEREMONIAL_BOWL</li>
+<li>DADS_WALLET</li>
+<li>ECTOPLASM</li>
+<li>HELLS_EYE</li>
+<li>IED</li>
+<li>LUCKY_CAT</li>
+<li>MOMS_GRIEF</li>
+<li>PAPER_AIRPLANE</li>
+<li>ROPES</li>
+</ul>
+<h2 id="epiphanycard">Epiphany.Card<a class="headerlink" href="#epiphanycard" title="Permanent link">⚓︎</a></h2>
+<details class="info" open="open">
+<summary>Card structure</summary>
+<p>The following variables may be accessed through <code>Epiphany.Card</code>. Variables that may not be present are marked with *:</p>
+<ul>
+<li><code>ID</code>: Holds the Card ID.</li>
+<li><code>SFX</code>: Announcer voiceline when using the card.
+<code></code>SFX_ALT`*: Alternate announcer voiceline that plays rarely.</li>
+</ul>
+</details>
+<ul>
+<li>AGAINST_HUMANITY</li>
+<li>DEBIT_CARD</li>
+<li>DRAWN_CARD</li>
+<li>DRAW_ONE</li>
+<li>EXCLAMATION_MARK</li>
+<li>GO_TO_JAIL</li>
+<li>HOUSE_QUEEN_OF_HEARTS</li>
+<li>HOUSE_RULES</li>
+<li>HOUSE_SUICIDE_KING</li>
+<li>HOUSE_TWO_OF_CLUBS</li>
+<li>HOUSE_TWO_OF_DIAMONDS</li>
+<li>HOUSE_TWO_OF_HEARTS</li>
+<li>HOUSE_TWO_OF_SPADES</li>
+<li>INVERSE</li>
+<li>MINUS_ONE</li>
+<li>OFFERING</li>
+<li>PAIN_IN_A_BOX</li>
+<li>REVERSE</li>
+<li>SMALL_RAZOR</li>
+</ul>
+<h2 id="epiphanyessence">Epiphany.Essence<a class="headerlink" href="#epiphanyessence" title="Permanent link">⚓︎</a></h2>
+<details class="info" open="open">
+<summary>Essence structure</summary>
+<p>The following variables may be accessed through <code>Epiphany.Essence</code>. Variables that may not be present are marked with *:</p>
+<ul>
+<li><code>ID</code>: Holds the Essence ID.</li>
+<li><code>SFX</code>: Announcer voiceline when using the essence.
+<code></code>SFX_ALT`*: Alternate announcer voiceline that plays rarely.</li>
+</ul>
+</details>
+<ul>
+<li>BAGGED</li>
+<li>BETHANY</li>
+<li>BLUEBABY</li>
+<li>CAIN</li>
+<li>EDEN</li>
+<li>ISAAC</li>
+<li>JUDAS</li>
+<li>KEEPER</li>
+<li>LOST</li>
+<li>MAGDALENE</li>
+<li>SAMSON</li>
+</ul>
+<h2 id="epiphanycapsule">Epiphany.Capsule<a class="headerlink" href="#epiphanycapsule" title="Permanent link">⚓︎</a></h2>
+<details class="info" open="open">
+<summary>Capsule structure</summary>
+<p>The following variables may be accessed through <code>Epiphany.Capsule</code>. Variables that may not be present are marked with *:</p>
+<ul>
+<li><code>ID</code>: Holds the Capsule ID.</li>
+<li><code>SFX</code>: Announcer voiceline when using the capsule.
+<code></code>WEIGHT`: Alternate announcer voiceline that plays rarely.</li>
+<li><code>MOD</code>*: If belonging to another mod, contains a string of the mod's name. By default, Epiphany and Fiend Folio are used.</li>
+</ul>
+</details>
+<ul>
+<li>AZURITE_SPINDOWN</li>
+<li>D1</li>
+<li>D10</li>
+<li>D100</li>
+<li>D12</li>
+<li>D2</li>
+<li>D20</li>
+<li>D3</li>
+<li>D4</li>
+<li>D5</li>
+<li>D6</li>
+<li>D7</li>
+<li>D8</li>
+<li>DUSTY_D10</li>
+<li>ETERNAL_D10</li>
+<li>ETERNAL_D12</li>
+<li>ETERNAL_D6</li>
+<li>GAMBITS_DICE</li>
+<li>LOADED_D6</li>
+<li>SPINDOWN_DICE</li>
+</ul>
+<h2 id="epiphanyslot">Epiphany.Slot<a class="headerlink" href="#epiphanyslot" title="Permanent link">⚓︎</a></h2>
+<details class="info" open="open">
+<summary>SlotVariant</summary>
+<p>The SlotVariant ID is accessed through <code>Epiphany.Slot.SLOT_NAME.ID</code>.</p>
+</details>
+<ul>
+<li>ALTAR</li>
+<li>CONVERTER_BEGGAR</li>
+<li>DICE_MACHINE</li>
+<li>GLITCH</li>
+<li>GRAFTING_ALTAR</li>
+<li>PAIN_O_MATIC</li>
+<li>PROBOSCIS</li>
+<li>TITHE_BOX</li>
+<li>TURNOVER_RESTOCK</li>
+</ul>
+<h2 id="epiphanypickup">Epiphany.Pickup<a class="headerlink" href="#epiphanypickup" title="Permanent link">⚓︎</a></h2>
+<details class="info" open="open">
+<summary>PickupVariant</summary>
+<p>The PickupVariant ID is accessed through <code>Epiphany.Slot.SLOT_NAME.ID</code>.</p>
+</details>
+<ul>
+<li>BLUE_BROKEN_HEART</li>
+<li>BOMB_SACK</li>
+<li>BROKEN_HEART</li>
+<li>COLOSTOMY</li>
+<li>DIME_DAMAGE</li>
+<li>DIME_LUCK</li>
+<li>DIME_RANGE</li>
+<li>DIME_SHOTSPEED</li>
+<li>DIME_SPEED</li>
+<li>DIME_TEARS</li>
+<li>DUSTY_CHEST</li>
+<li>GOLDEN_ITEM</li>
+<li>MANTLE_SHARD</li>
+<li>MULTITOOL</li>
+<li>NICKEL_DAMAGE</li>
+<li>NICKEL_LUCK</li>
+<li>NICKEL_RANGE</li>
+<li>NICKEL_SHOTSPEED</li>
+<li>NICKEL_SPEED</li>
+<li>NICKEL_TEARS</li>
+<li>ONE_TIME_USE_ITEM</li>
+<li>PENNY_DAMAGE</li>
+<li>PENNY_LUCK</li>
+<li>PENNY_RANGE</li>
+<li>PENNY_SHOTSPEED</li>
+<li>PENNY_SPEED</li>
+<li>PENNY_TEARS</li>
+<li>SAMPLE_BOMBS</li>
+<li>TASTY_PENNY</li>
+<li>WHEAT</li>
+</ul>
+<h2 id="epiphanygrid">Epiphany.Grid<a class="headerlink" href="#epiphanygrid" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>TWISTED_ROCK<ul>
+<li>Has the type <code>GridEntityType.GRID_ROCK</code> and variant <code>TWISTED_ROCK.ID</code>.</li>
+</ul>
+</li>
+<li>WISP_HIVE<ul>
+<li>Identified by save data that can be checked with <code>WISP_HIVE:IsWispHive(fire)</code>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="epiphanynpc">Epiphany.Npc<a class="headerlink" href="#epiphanynpc" title="Permanent link">⚓︎</a></h2>
+<details class="info" open="open">
+<summary>PickupVariant</summary>
+<p>The EntityType ID is accessed through <code>Epiphany.Npc.NPC_NAME.ID</code>.</p>
+</details>
+<details class="info" open="open">
+<summary>Revolt</summary>
+<p><code>KNIGHT</code>, <code>GRUNT</code>, <code>BRUTE</code>, and <code>COMMANDER</code> each contain <code>ID</code> and <code>Variant</code> for the EntityType and variant.</p>
+</details>
+<ul>
+<li>ABEL</li>
+<li>EDEN_GLITCH</li>
+<li>REVOLT<ul>
+<li>KNIGHT</li>
+<li>GRUNT</li>
+<li>BRUTE</li>
+<li>COMMANDER</li>
+</ul>
+</li>
+<li>SHADOW_MIRAGE</li>
+</ul>
+<h2 id="epiphanychallenge">Epiphany.Challenge<a class="headerlink" href="#epiphanychallenge" title="Permanent link">⚓︎</a></h2>
+<details class="- info">
+<summary>Challenge structure</summary>
+<p>The following variables may be accessed through <code>Epiphany.Challenge</code>. Variables that may not be present are marked with *:</p>
+<ul>
+<li><code>Name</code>: Name of the challenge. Used for the DSS achievement viewer.</li>
+<li><code>SortOrder</code>: Sort order inside the DSS achievement viewer.</li>
+<li><code>ID</code>: Challenge ID.</li>
+<li><code>Character</code>: Name of the character that starts in this challenge in all caps. Used to associate the challenge unlock with a character unlock</li>
+<li><code>UnlockReq</code>: The name of something else to be unlocked to unlock the challenge. Used for the DSS achievement viewer, currently exclusively unlocked with tarnished characters.</li>
+<li><code>Unlock</code>: Name of the achievement unlocked by beating the challenge.</li>
+<li><code>func</code>*: Function that passes the player. Called during <a href="https://repentogon.com/enums/ModCallbacks.html#mc_player_init_post_level_init_stats">MC_PLAYER_INIT_POST_LEVEL_INIT_STATS</a> during the respective challenge.</li>
+</ul>
+</details>
+<ul>
+<li>DEALMAKER</li>
+<li>DONDE_ESTA_LA_BIBLIOTECA</li>
+<li>EMPEROR_OF_FLIES</li>
+<li>FIRST_STONE</li>
+<li>HEART_BURN</li>
+<li>KAGEMANE_NO_JUTSU</li>
+<li>NULL_POINTER_EXCEPTION</li>
+<li>ONE_WITH_NOTHING</li>
+<li>OVERWHELMING_ODDS</li>
+<li>POOL</li>
+<li>RETRIBUTION_CHALLENGE</li>
+</ul>
+<h2 id="epiphanypickupprice">Epiphany.PickupPrice<a class="headerlink" href="#epiphanypickupprice" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>PRICE_HEART_DEBT: PickupPrice,</li>
+<li>PRICE_KEYS: PickupPrice,</li>
+<li>PRICE_TWO_BLUE_BROKEN_HEARTS: PickupPrice,</li>
+<li>PRICE_TWO_BROKEN_HEARTS: PickupPrice,</li>
+</ul>
+<h2 id="epiphanyrooms">Epiphany.Rooms<a class="headerlink" href="#epiphanyrooms" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>ATTIC</li>
+<li>BATHROOM</li>
+<li>BETHANY_ENDING</li>
+<li>CHEST</li>
+<li>REVOLT</li>
+<li>ROOM_MANAGER</li>
+</ul>
+<h2 id="epiphanymiscfamiliar">Epiphany.MiscFamiliar<a class="headerlink" href="#epiphanymiscfamiliar" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>BLOOD_BABY_IRONCLAD<ul>
+<li>Variant: <code>FamiliarVariant.BLOOD_BABY</code>, Subtype: Table's <code>ID</code>.</li>
+</ul>
+</li>
+<li>FLY_HOLY<ul>
+<li>Variant: <code>FamiliarVariant.BLUE_FLY</code>, Subtype: Table's <code>ID</code>.</li>
+</ul>
+</li>
+<li>FLY_ICY<ul>
+<li>Variant: <code>FamiliarVariant.BLUE_FLY</code>, Subtype: Table's <code>ID</code>.</li>
+</ul>
+</li>
+<li>FLY_MAGNETIC<ul>
+<li>Variant: <code>FamiliarVariant.BLUE_FLY</code>, Subtype: Table's <code>ID</code>.</li>
+</ul>
+</li>
+<li>FLY_PSYCHIC<ul>
+<li>Variant: <code>FamiliarVariant.BLUE_FLY</code>, Subtype: Table's <code>ID</code>.</li>
+</ul>
+</li>
+<li>SOILED_KEEPER<ul>
+<li>Variant: Table's <code>ID</code>.</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 20, 2026 14:38:54 UTC">August 20, 2026</span>
+  </span>
+
+    
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+      
+    </span>
+    <nav>
+      BenevolusGoat
+    </nav>
+  </span>
+
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>

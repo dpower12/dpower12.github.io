@@ -1,0 +1,1482 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../turnover_shops/">
+      
+      
+        <link rel="next" href="../../mod_callbacks/">
+      
+      
+      <link rel="icon" href="../../../img/favicon.png">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Throwing Bag - Epiphany API Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    
+    <meta property="og:site_name" content="Epiphany API Docs"  />
+<meta property="og:image" content="https://isaacblueprints.com/tutorials/assets/isaacblueprints.png" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:description" content=" test description." />
+
+<meta property="og:url" content="None" />
+<meta name="theme-color" content="#566c8a" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#adding-to-existing-synergies" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Epiphany API Docs" class="md-header__button md-logo" aria-label="Epiphany API Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Epiphany API Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Throwing Bag
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Epiphany API Docs" class="md-nav__button md-logo" aria-label="Epiphany API Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
+
+    </a>
+    Epiphany API Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../table_structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adding_a_character/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding a Character
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Items
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Items
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../item_pools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Item pools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../item_tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Item tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../turnover_shops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Turnover shops
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Throwing Bag
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Throwing Bag
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-to-existing-synergies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding to existing synergies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#throwing-bag-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Throwing Bag tables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Throwing Bag tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bagdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      BagData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swingingbagdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      SwingingBagData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thrownbagdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      ThrownBagData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impactburstparams" class="md-nav__link">
+    <span class="md-ellipsis">
+      ImpactBurstParams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#burstparamsconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      BurstParamsConfig
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bagsinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      BagsInfo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bagmetadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      BagMetaData
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-custom-synergies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating custom synergies
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mod_callbacks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ModCallbacks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-to-existing-synergies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding to existing synergies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#throwing-bag-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Throwing Bag tables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Throwing Bag tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bagdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      BagData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swingingbagdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      SwingingBagData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thrownbagdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      ThrownBagData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impactburstparams" class="md-nav__link">
+    <span class="md-ellipsis">
+      ImpactBurstParams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#burstparamsconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      BurstParamsConfig
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bagsinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      BagsInfo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bagmetadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      BagMetaData
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-custom-synergies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating custom synergies
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Throwing Bag</h1>
+
+<details class="warning" open="open">
+<summary>Work in progress!</summary>
+<p><strong>This article is a work in progress!</strong> Some sections may be incomplete or need revising.</p>
+</details>
+<p><a href="https://tboiepiphany.wiki.gg/wiki/Throwing_Bag">Throwing Bag</a> is an active item that serves as <a href="https://tboiepiphany.wiki.gg/wiki/Tarnished_Cain">Tarnished Cain</a>'s primary method of attacking, throwing the bag and needing to collect it to attack again. Throwing Bag can absorb two items in order to make additional bags to throw, each item contributing a unique effect to the bag it was crafted into. If the item is collected on its own, it may also provide a unique synergy to all of the player's bags.</p>
+<p>Epiphany's API allows for adding your own custom synergies for Throwing Bag. This article will cover the large array of options available for customizing its effect.</p>
+<h2 id="adding-to-existing-synergies">Adding to existing synergies<a class="headerlink" href="#adding-to-existing-synergies" title="Permanent link">⚓︎</a></h2>
+<p>While Throwing Bag has unique synergies for many notable items, it also has a wide array of synergies that group many items together, all contributing to the same bag effect. This is an easy shortcut to giving an item a Throwing Bag synergy, especially for other mods that may not want to take the time to make completely unique synergies from scratch. To contribute an item to an existing synergy, the function <code>Epiphany.API.AddCollectibleToCainBagSynergy</code> accepts an identifier string and an array of CollectibleTypes. Below is a full list of available generic synergies and what items should be part of it. To view the existing items already present in these synergies and their effects, see <a href="https://tboiepiphany.wiki.gg/wiki/Throwing_Bag#Bagged_Item_Synergies">this page on the official Epiphany wiki</a>.</p>
+<details class="- info">
+<summary>Throwing Bag generic synergies</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">string ID</th>
+<th style="text-align: left;">Theme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>angel_bagged</code></td>
+<td style="text-align: left;">Angelic<br><strong>Auto-includes items with the <code>angel</code> tag</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>bait_bagged</code></td>
+<td style="text-align: left;">Inflicts the Bait status</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>battery_bagged</code></td>
+<td style="text-align: left;">Battery<br><strong>Auto-includes items with the <code>battery</code> tag</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>birthing_bagged</code></td>
+<td style="text-align: left;">Pregnancy, birth, fetuses</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>blackhole_bagged</code></td>
+<td style="text-align: left;">Black hole, void, abyss</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>bomb_bagged</code></td>
+<td style="text-align: left;">Bomb synergies</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>bone_bagged</code></td>
+<td style="text-align: left;">Bones</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>book_bagged</code></td>
+<td style="text-align: left;">Books<br><strong>Auto-includes items with the <code>book</code> tag</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>boss_bagged</code></td>
+<td style="text-align: left;">Represents a boss</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>charm_bagged</code></td>
+<td style="text-align: left;">Inflicts the Charm status</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>childhood_bagged</code></td>
+<td style="text-align: left;">Childhood</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>confusion_bagged</code></td>
+<td style="text-align: left;">Inflicts the Confusion status</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cursed_bagged</code></td>
+<td style="text-align: left;">Voodoo, sacrifice, rituals, shadows</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>devil_bagged</code></td>
+<td style="text-align: left;">Devil<br><strong>Auto-includes items with the <code>devil</code> tag</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dice_bagged</code></td>
+<td style="text-align: left;">Demonic</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>drug_bagged</code></td>
+<td style="text-align: left;">Pills, mushrooms, syringes<br><strong>Please see the note at the bottom of the table.</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>explorer_bagged</code></td>
+<td style="text-align: left;">Exploration, maps, traversal</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>familiar_bagged</code></td>
+<td style="text-align: left;">Baby-like familiars<br><strong>Items with the baby tag contribute to this synergy automatically</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>fart_bagged</code></td>
+<td style="text-align: left;">Triggers fart effects</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>fate_bagged</code></td>
+<td style="text-align: left;">Blue Baby, Isaac's death</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>fear_bagged</code></td>
+<td style="text-align: left;">Inflicts the Fear status</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>fertilizer_bagged</code></td>
+<td style="text-align: left;">Flowers, plants, dirt</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>fire_bagged</code></td>
+<td style="text-align: left;">Inflicts the Burn status, fire, flame, hot</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>flies_bagged</code></td>
+<td style="text-align: left;">Is a fly, or spawns flies<br><strong>Items with the fly tag contribute to this synergy automatically</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>gamer_bagged</code></td>
+<td style="text-align: left;">Gamer culture and other games</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>glitched_bagged</code></td>
+<td style="text-align: left;">Glitchy</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>golden_bagged</code></td>
+<td style="text-align: left;">Gold, money, shops, greed</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>guppy_bagged</code></td>
+<td style="text-align: left;">Guppy parts<br><strong>Items with the guppy tag contribute to this synergy automatically</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>harbinger_bagged</code></td>
+<td style="text-align: left;">Horsemen of the Apocalypse</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>homing_bagged</code></td>
+<td style="text-align: left;">Grants homing tears</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>isack_bagged</code></td>
+<td style="text-align: left;">Isaac, bums, has significant importance to Isaac's life, Option items</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>latex_bagged</code></td>
+<td style="text-align: left;">Latex, razor</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>lotto_bagged</code></td>
+<td style="text-align: left;">Lottery, gambling</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>luck_bagged</code></td>
+<td style="text-align: left;">Increases Isaac's luck stat</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>lunch_bagged</code></td>
+<td style="text-align: left;">Low-quality food<br><strong>Items with the food tag contribute to this synergy automatically</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>magnet_bagged</code></td>
+<td style="text-align: left;">Magnet, magnetism, inflicts Magnetized status</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>meal_bagged</code></td>
+<td style="text-align: left;">High-quality food</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>medical_bagged</code></td>
+<td style="text-align: left;">Blood, bandages, medicine, surgical tools, medical conditions</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>generic_milk_bagged</code></td>
+<td style="text-align: left;">Milk</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mom_bagged</code></td>
+<td style="text-align: left;">Mom<br><strong>Items with the mom tag contribute to this synergy automatically</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mystic_bagged</code></td>
+<td style="text-align: left;">Planetarium, Zodiac signs, runes, fortune telling<br><strong>Items with the stars tag contribute to this synergy automatically</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>organ_bagged</code></td>
+<td style="text-align: left;">Organ</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>paper_bagged</code></td>
+<td style="text-align: left;">Paper, card</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>petrifying_bagged</code></td>
+<td style="text-align: left;">Inflicts the Petrify status</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>piercing_bagged</code></td>
+<td style="text-align: left;">Grants Isaac piercing tears</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>poison_bagged</code></td>
+<td style="text-align: left;">Inflicts the Poison status</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>poop_bagged</code></td>
+<td style="text-align: left;">Poop<br><strong>Items with the poop tag contribute to this synergy automatically</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>punching_bagged</code></td>
+<td style="text-align: left;">Violence, Samson</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>purse_bagged</code></td>
+<td style="text-align: left;">Can be found inside a purse</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>rock_bagged</code></td>
+<td style="text-align: left;">Rock, and stone</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>sack_bagged</code></td>
+<td style="text-align: left;">Sack, pouch</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>sharps_bagged</code></td>
+<td style="text-align: left;">Sharp</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>slow_bagged</code></td>
+<td style="text-align: left;">Inflicts the Slow status</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spectral_bagged</code></td>
+<td style="text-align: left;">Grants Isaac spectral tears</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spider_bagged</code></td>
+<td style="text-align: left;">Is a spider, or spawns spiders<br><strong>Items with the spider tag contribute to this synergy automatically</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spirit_bagged</code></td>
+<td style="text-align: left;">Spirits, ghosts, souls</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>sanctum_spiritus_bagged</code></td>
+<td style="text-align: left;">Holy spirits, significant holy items</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tool_bagged</code></td>
+<td style="text-align: left;">Tools for various purposes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tough_bagged</code></td>
+<td style="text-align: left;">Heavy protection</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="- note">
+<summary>drug_bagged synergies</summary>
+<p>No items are added to this tag directly, instead having its own synergy to change the <code>burst_color</code> variable based on the drug, and assigning <code>drug_bagged</code> as its parent. When adding to this synergy, use one of the following group tags or create your own with a unique color:</p>
+<ul>
+<li><code>whitedrug</code></li>
+<li><code>reddrug</code></li>
+<li><code>momspills</code></li>
+<li><code>whitepills</code></li>
+</ul>
+</details>
+<h2 id="throwing-bag-tables">Throwing Bag tables<a class="headerlink" href="#throwing-bag-tables" title="Permanent link">⚓︎</a></h2>
+<p>Before moving onto creating custom synergies for Throwing Bag, this section lists all "classes", or tables of data, associated with Throwing Bag, and the variables contained within. Refer back to this section when working with them.</p>
+<details class="warning" open="open">
+<summary>Incomplete documentation</summary>
+<p>Many variables, and descriptions of classes, are currently missing descriptions. Please feel free to contribute by giving them one!</p>
+</details>
+<details class="note" open="open">
+<summary>VSCode autocomplete</summary>
+<p>If you don't want to constantly look back at this documentation while working on custom synergies, it is recommended to use the <a href="https://marketplace.visualstudio.com/items?itemName=Filloax.isaac-lua-api-vscode">Isaac Lua Extention for VSCode</a>. Throwing Bag's file contains EmmyLua annotations for all of these classes. These can be stored in any Lua file, but it is recommended to use a <code>globals.lua</code> file at the root of your mod folder, as <a href="https://marketplace.visualstudio.com/items?itemName=sumneko.lua">sumneko's VSCode Lua extension</a> detects this file for manually defining and recognizing global variables.</p>
+</details>
+<h3 id="bagdata">BagData<a class="headerlink" href="#bagdata" title="Permanent link">⚓︎</a></h3>
+<p>Data of the Bag, not be confused with SwingingBagData and ThrownBagData</p>
+<details class="- info">
+<summary>Variables</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable Name</th>
+<th style="text-align: left;">Possible values</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ExtraMass</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">How heavier or lighter the bag is</td>
+</tr>
+<tr>
+<td style="text-align: left;">Content</td>
+<td style="text-align: left;">BagContent</td>
+<td style="text-align: left;">Table keys are stringified item ids</td>
+</tr>
+<tr>
+<td style="text-align: left;">IsGolden</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;">Whether the bag has a golden item in it. Used for visuals</td>
+</tr>
+<tr>
+<td style="text-align: left;">Timestamp</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">The time this bag was created. Used for comparing a bag info with all bag data without having the bag itself</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="swingingbagdata">SwingingBagData<a class="headerlink" href="#swingingbagdata" title="Permanent link">⚓︎</a></h3>
+<p>For a Bag currently being swung.</p>
+<details class="- info">
+<summary>Variables</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable Name</th>
+<th style="text-align: left;">Possible values</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">BagId</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">PlayerOwner</td>
+<td style="text-align: left;">EntityPlayer</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">BagData</td>
+<td style="text-align: left;">BagData</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">DamageMultiplier</td>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">TransitionalData</td>
+<td style="text-align: left;">table</td>
+<td style="text-align: left;">Gets moved over to the thrown bag</td>
+</tr>
+<tr>
+<td style="text-align: left;">Data</td>
+<td style="text-align: left;">table</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">LuckBonus</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">Bonus from lucky bag</td>
+</tr>
+<tr>
+<td style="text-align: left;">DamageFlags</td>
+<td style="text-align: left;">DamageFlag</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ChildBags</td>
+<td style="text-align: left;">EntityEffect[]</td>
+<td style="text-align: left;">Mechanics and functionality unknown, better avoid using this</td>
+</tr>
+<tr>
+<td style="text-align: left;">FlatDamageBonus</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">Extra damage to be added on top of ThrownDamage</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mass</td>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;">Mass of the bag</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="thrownbagdata">ThrownBagData<a class="headerlink" href="#thrownbagdata" title="Permanent link">⚓︎</a></h3>
+<p>For a Bag that has been thrown. Shares all variables from <a href="#swingingbagdata">SwingingBagData</a>.</p>
+<details class="- info">
+<summary>Variables</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable Name</th>
+<th style="text-align: left;">Possible values</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">BagBouncesRemaining</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">BaggedBombs</td>
+<td style="text-align: left;">EntityBomb[]</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">GridBouncesRemaining</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ThrownDamage</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">EnemyBouncesRemaining</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">BagFlags</td>
+<td style="text-align: left;">table</td>
+<td style="text-align: left;">Table of variable names to booleans. Can hold <code>PIERCING</code> and <code>HOMING</code>, which changes behaviour of some bags if set to <code>true</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">CustomVelocity</td>
+<td style="text-align: left;">Vector</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">BagUnloadCount</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">HitCount</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">CanRecall</td>
+<td style="text-align: left;">boolean, nil</td>
+<td style="text-align: left;">Default: <code>true</code>. Set to <code>false</code> so the bag cannot be recalled, only picked up manually.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Aura</td>
+<td style="text-align: left;">EntityEffect</td>
+<td style="text-align: left;">An <code>EntityEffect</code> that will follow the bag</td>
+</tr>
+<tr>
+<td style="text-align: left;">OriginalOffset</td>
+<td style="text-align: left;">Vector</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">IsFalling</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">CanPickUp</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">IgnoreGrid</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">IgnoreWalls</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">SlowingFactor</td>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;">Bag velocity will be multiplied by this number every frame. default: 0.97</td>
+</tr>
+<tr>
+<td style="text-align: left;">ImpactBurstParams</td>
+<td style="text-align: left;">ImpactBurstParams[]</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">IsFirstBagInPool</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">IgnoreEnemies</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">LastPosition</td>
+<td style="text-align: left;">Vector</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="impactburstparams">ImpactBurstParams<a class="headerlink" href="#impactburstparams" title="Permanent link">⚓︎</a></h3>
+<details class="- info">
+<summary>Variables</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable Name</th>
+<th style="text-align: left;">Possible values</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">color</td>
+<td style="text-align: left;">Color, nil</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">count</td>
+<td style="text-align: left;">number, nil</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">count_std</td>
+<td style="text-align: left;">number, nil</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">speed</td>
+<td style="text-align: left;">number, nil</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">speed_std</td>
+<td style="text-align: left;">number, nil</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">damage_multi</td>
+<td style="text-align: left;">number, nil</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">variant</td>
+<td style="text-align: left;">TearVariant, nil</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">tear_flags</td>
+<td style="text-align: left;">TearFlags, nil</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="burstparamsconfig">BurstParamsConfig<a class="headerlink" href="#burstparamsconfig" title="Permanent link">⚓︎</a></h3>
+<details class="- info">
+<summary>Variables</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable Name</th>
+<th style="text-align: left;">Possible values</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">count_add_multi</td>
+<td style="text-align: left;">number, nil</td>
+<td style="text-align: left;">Minimum multiplier of tears that are spawned based on tearrate (default: 1.5)</td>
+</tr>
+<tr>
+<td style="text-align: left;">count_std_multi</td>
+<td style="text-align: left;">number, nil</td>
+<td style="text-align: left;">Maximum value for random addition to multiplier of tears (default: 0.1665)</td>
+</tr>
+<tr>
+<td style="text-align: left;">speed_add_multi</td>
+<td style="text-align: left;">number, nil</td>
+<td style="text-align: left;">Minimum multiplier of amount of speed (value 15) of tears (default: 1)</td>
+</tr>
+<tr>
+<td style="text-align: left;">speed_std_multi</td>
+<td style="text-align: left;">number, nil</td>
+<td style="text-align: left;">Maximum value for random addition to multiplier of speed (value 15) of tears (default: 0.2)</td>
+</tr>
+<tr>
+<td style="text-align: left;">damage_multi</td>
+<td style="text-align: left;">number, nil</td>
+<td style="text-align: left;">Damage multiplier of tears (default: 1)</td>
+</tr>
+<tr>
+<td style="text-align: left;">variant</td>
+<td style="text-align: left;">TearVariant, nil</td>
+<td style="text-align: left;">TearVariant of tears (default: TearVariant.BLUE)</td>
+</tr>
+<tr>
+<td style="text-align: left;">flags</td>
+<td style="text-align: left;">TearFlags, nil</td>
+<td style="text-align: left;">TearFlags of tears (default: 0 AKA none)</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="bagsinfo">BagsInfo<a class="headerlink" href="#bagsinfo" title="Permanent link">⚓︎</a></h3>
+<details class="- info">
+<summary>Variables</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable Name</th>
+<th style="text-align: left;">Possible values</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">BagData</td>
+<td style="text-align: left;">table</td>
+<td style="text-align: left;">Table of strings to BagData</td>
+</tr>
+<tr>
+<td style="text-align: left;">BagQueue</td>
+<td style="text-align: left;">table</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">BaggedItemsList</td>
+<td style="text-align: left;">CollectibleType</td>
+<td style="text-align: left;">[]</td>
+</tr>
+<tr>
+<td style="text-align: left;">BagCountLimit</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ExtraItemsBagged</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">GoldenItemBagged</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;">Indicates whether a golden item was added to the current WIP bag. Used for displaying golden visual effect</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="bagmetadata">BagMetaData<a class="headerlink" href="#bagmetadata" title="Permanent link">⚓︎</a></h3>
+<details class="- info">
+<summary>Variables</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable Name</th>
+<th style="text-align: left;">Possible values</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">BagsData</td>
+<td style="text-align: left;">BagsInfo[]</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">CurrentIndex</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">Index of the currently used bag queue in BagsData array</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h2 id="creating-custom-synergies">Creating custom synergies<a class="headerlink" href="#creating-custom-synergies" title="Permanent link">⚓︎</a></h2>
+<p>This is the part where I'd say something swagilicious</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 20, 2026 14:38:54 UTC">August 20, 2026</span>
+  </span>
+
+    
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+      
+    </span>
+    <nav>
+      BenevolusGoat
+    </nav>
+  </span>
+
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
