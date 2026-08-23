@@ -17,7 +17,7 @@ Turnover shops are added through the function `Epiphany.API:AddTurnoverShop`, wh
 ### ShopLayout
 This table is where you define the layout of your shop. What items and pickups spawn, where your shopkeeper spawns, and how much it costs to setup the shop for creating and upgrading your shop.
 
-Below is a detailed example layout of a ShopLayout table:
+Below is a detailed example of a ShopLayout table:
 
 ???+ info "ShopItemType"
 	This is how you determine what "type" of item spawns in your shop. Accessed through Epiphany.Item.TURNOVER.ShopItemType, it has the following variables available:

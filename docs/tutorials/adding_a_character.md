@@ -1,10 +1,24 @@
 In addition to the work-in-progress set of tarnished characters for the vanilla cast, Epiphany supports adding tarnished versions of modded characters. This article covers everything you'd need to know about adding and configuring your own tarnished character.
 
+???- info "Converting an old Tarnished"
+	Reading this guide to update a custom Tarnished character made before Wave 8? Here's a quickstart list of what to update:
+
+	**Required**:
+
+	- Required achievement in `achievements.xml` named `"HIDE_MENU_[CHAR_NAME]"`, where `[CHAR_NAME]` (without brackets) is the name of your Tarnished entered into the Epiphany API.
+	- Use `hideachievement` instead of `hidden` in your `players.xml` for your tarnished, setting it equal to your new HIDE_MENU achievement.
+	- New color palette for tarnished characters, and a normal "grey" version of the portrait. The grey one is assigned to your content folder's characterportraits.xml, the red to your tarnished menu anm2.
+	- Add `taintedID` to your table in `Epiphany.API.AddCharacter` and set it equal to the tainted character ID that your character should be sorted under.
+
+	**Optional:**
+
+	- Hit sounds, death sounds, starting stats, pocket actives, starting health, and character costume can all be defined in [players.xml](https://repentogon.com/xml/players.html).
+	- New attributes to `Epiphany.API.AddCharacter`: `blockedItems`, `blockedTrinkets`, `hairCostumeItems`, `hairCostumeNulls`, `bloodTears`, `nullStats`. See [this section](#registering-the-tarnished) for more information.
+	- To ensure your tarnished only applies to Epiphany Wave 8 and up, you can require a version check on top of the global check before you add your tarnished, being: `Epiphany and tonumber(Epiphany.WAVE_NUMBER) >= 8`.
+
 ## Setting up your character
 
-This article assumes you know how to create a modded character to begin with. If for some reason you don't, see [this page on Isaac Blueprints](https://isaacblueprints.com/tutorials/crash_course/character/).
-
-Setting up your character entry should be identical to making a normal modded character. All the actions that handle making it a tarnished character are done through Lua, not the XML files, but there will be additions needed there as well. For this article, we will be creating a tarnished version of a character named "?".
+This article assumes you know how to create a modded character to begin with. If for some reason you don't, see [this page on Isaac Blueprints](https://isaacblueprints.com/tutorials/crash_course/character/). Setting up your character entry should be identical to making a normal modded character. For this article, we will be creating a tarnished version of a character named "?".
 
 Before Wave 8, you could create a tarnished character on its lonesome without the requirement of a normal or tainted version. With the implementation of tarnished characters directly on the main menu, it overrides an existing character on the menu. As such, **you must have at least one other character entry to add a tarnished character**. This may change in the future, but for now you need a character that will show up on the main menu at all times.
 

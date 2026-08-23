@@ -81,117 +81,21 @@ While Throwing Bag has unique synergies for many notable items, it also has a wi
 
 ## Throwing Bag tables
 
-Before moving onto creating custom synergies for Throwing Bag, this section lists all "classes", or tables of data, associated with Throwing Bag, and the variables contained within. Refer back to this section when working with them.
-
-???+ warning "Incomplete documentation"
-	Many variables, and descriptions of classes, are currently missing descriptions. Please feel free to contribute by giving them one!
+There are many tables associated with Throwing Bag. While not classes in the literal sense, they are documented as such, and ones pertaining to Throwing Bag are listed below:
 
 ???+ note "VSCode autocomplete"
 	If you don't want to constantly look back at this documentation while working on custom synergies, it is recommended to use the [Isaac Lua Extention for VSCode](https://marketplace.visualstudio.com/items?itemName=Filloax.isaac-lua-api-vscode). Throwing Bag's file contains EmmyLua annotations for all of these classes. These can be stored in any Lua file, but it is recommended to use a `globals.lua` file at the root of your mod folder, as [sumneko's VSCode Lua extension](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) detects this file for manually defining and recognizing global variables.
 
-### BagData
-Data of the Bag, not be confused with SwingingBagData and ThrownBagData
-
-???- info "Variables"
-	|Variable Name|Possible values|Description|
-	|:--|:--|:--|
-	|ExtraMass 	| integer	 | How heavier or lighter the bag is |
-	|Content 	| BagContent | Table keys are stringified item ids |
-	|IsGolden 	| boolean 	 | Whether the bag has a golden item in it. Used for visuals |
-	|Timestamp 	| integer	 | The time this bag was created. Used for comparing a bag info with all bag data without having the bag itself |
-
-### SwingingBagData
-For a Bag currently being swung.
-
-???- info "Variables"
-	|Variable Name|Possible values|Description|
-	|:--|:--|:--|
-	|BagId				| string		||
-	|PlayerOwner		| EntityPlayer	||
-	|BagData			| BagData		||
-	|DamageMultiplier	| number		||
-	|TransitionalData	| table			| Gets moved over to the thrown bag |
-	|Data				| table			||
-	|LuckBonus			| integer		| Bonus from lucky bag |
-	|DamageFlags		| DamageFlag	||
-	|ChildBags			| EntityEffect[]| Mechanics and functionality unknown, better avoid using this |
-	|FlatDamageBonus	| integer		| Extra damage to be added on top of ThrownDamage |
-	|Mass				| number		| Mass of the bag |
-
-### ThrownBagData
-For a Bag that has been thrown. Shares all variables from [SwingingBagData](#swingingbagdata).
-
-???- info "Variables"
-	|Variable Name|Possible values|Description|
-	|:--|:--|:--|
-	|BagBouncesRemaining	| integer			 ||
-	|BaggedBombs			| EntityBomb[]		 ||
-	|GridBouncesRemaining	| integer			 ||
-	|ThrownDamage			| integer			 ||
-	|EnemyBouncesRemaining	| integer			 ||
-	|BagFlags				| table				 | Table of variable names to booleans. Can hold `PIERCING` and `HOMING`, which changes behaviour of some bags if set to `true`.|
-	|CustomVelocity			| Vector			 ||
-	|BagUnloadCount			| integer			 ||
-	|HitCount				| integer			 ||
-	|CanRecall				| boolean, nil		 | Default: `true`. Set to `false` so the bag cannot be recalled, only picked up manually.|
-	|Aura					| EntityEffect		 | An `EntityEffect` that will follow the bag|
-	|OriginalOffset			| Vector			 ||
-	|IsFalling				| boolean			 ||
-	|CanPickUp				| boolean			 ||
-	|IgnoreGrid				| boolean			 ||
-	|IgnoreWalls			| boolean			 ||
-	|SlowingFactor			| number			 | Bag velocity will be multiplied by this number every frame. default: 0.97|
-	|ImpactBurstParams		| ImpactBurstParams[]||
-	|IsFirstBagInPool		| boolean			 ||
-	|IgnoreEnemies			| boolean			 ||
-	|LastPosition			| Vector			 ||
-
-### ImpactBurstParams
-
-???- info "Variables"
-	|Variable Name|Possible values|Description|
-	|:--|:--|:--|
-	|color			| Color, nil		||
-	|count			| number, nil		||
-	|count_std		| number, nil		||
-	|speed			| number, nil		||
-	|speed_std		| number, nil		||
-	|damage_multi	| number, nil		||
-	|variant		| TearVariant, nil	||
-	|tear_flags		| TearFlags, nil	||
-
-### BurstParamsConfig
-
-???- info "Variables"
-	|Variable Name|Possible values|Description|
-	|:--|:--|:--|
-	|count_add_multi	| number, nil		| Minimum multiplier of tears that are spawned based on tearrate (default: 1.5) |
-	|count_std_multi	| number, nil		| Maximum value for random addition to multiplier of tears (default: 0.1665) |
-	|speed_add_multi	| number, nil		| Minimum multiplier of amount of speed (value 15) of tears (default: 1) |
-	|speed_std_multi	| number, nil		| Maximum value for random addition to multiplier of speed (value 15) of tears (default: 0.2) |
-	|damage_multi		| number, nil		| Damage multiplier of tears (default: 1) |
-	|variant			| TearVariant, nil	| TearVariant of tears (default: TearVariant.BLUE) |
-	|flags				| TearFlags, nil	| TearFlags of tears (default: 0 AKA none) |
-
-### BagsInfo
-
-???- info "Variables"
-	|Variable Name|Possible values|Description|
-	|:--|:--|:--|
-	|BagData			| table					| Table of strings to BagData
-	|BagQueue			| table					|
-	|BaggedItemsList	| CollectibleType|[]	|
-	|BagCountLimit		| integer				|
-	|ExtraItemsBagged	| integer				|
-	|GoldenItemBagged	| boolean				| Indicates whether a golden item was added to the current WIP bag. Used for displaying golden visual effect
-
-### BagMetaData
-
-???- info "Variables"
-	|Variable Name|Possible values|Description|
-	|:--|:--|:--|
-	|BagsData 	  | BagsInfo[]  ||
-	|CurrentIndex | integer 	| Index of the currently used bag queue in BagsData array |
+- [BagData](../classes/)
+- [BagMetaData](../classes//BagMetaData.md)
+- [BagsInfo](../classes//BagsInfo.md)
+- [BagSwingParams](../classes//BagSwingParams.md)
+- [BurstParamsConfig](../classes//BurstParamsConfig.md)
+- [ImpactBurstParams](../classes//ImpactBurstParams.md)
+- [PlayerBagData](../classes//PlayerBagData.md)
+- [PlayerSwingParams](../classes//PlayerSwingParams.md)
+- [SwingingBagData](../classes//SwingingBagData.md)
+- [ThrownBagData](../classes//ThrownBagData.md)
 
 ## Creating custom synergies
 
