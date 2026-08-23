@@ -1,7 +1,7 @@
 # Class "ImpactBurstParams"
 
 ???+ info
-	Parameters for a Throwing Bag's tears to spawn upon impact with an obstacle, entity, or wall. Not to be confused with [BurstParamsConfig](BurstParamsConfig.md), which is used as a configuration interface for Throwing Bag synergies.
+	Parameters for a throwing bag's tears to spawn upon impact with an obstacle, entity, or wall. Not to be confused with [BurstParamsConfig](BurstParamsConfig.md), which is used as a configuration interface for throwing bag synergies.
 
 ## Variables
 

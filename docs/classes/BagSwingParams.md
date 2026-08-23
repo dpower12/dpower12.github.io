@@ -18,7 +18,7 @@
 		```
 
 ???+ info
-	Basic data pertaining to a swung Throwing Bag, not to be confused with [SwingingBagData](SwingingBagData.md).
+	Basic data pertaining to a swung throwing bag, not to be confused with [SwingingBagData](SwingingBagData.md).
 
 ## Variables
 

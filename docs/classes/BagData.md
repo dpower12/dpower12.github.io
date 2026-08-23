@@ -15,7 +15,7 @@
 
 
 ???+ info
-	This class contains data for an individual Throwing Bag.
+	This class contains data for an individual throwing bag.
 
 ## Variables
 

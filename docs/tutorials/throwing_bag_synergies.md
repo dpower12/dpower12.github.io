@@ -6,7 +6,7 @@ Epiphany's API allows for adding your own custom synergies for Throwing Bag. Thi
 
 ## Adding to existing synergies
 
-While Throwing Bag has unique synergies for many notable items, it also has a wide array of synergies that group many items together, all contributing to the same bag effect. This is an easy shortcut to giving an item a Throwing Bag synergy, especially for other mods that may not want to take the time to make completely unique synergies from scratch. To contribute an item to an existing synergy, the function `Epiphany.API.AddCollectibleToCainBagSynergy` accepts an identifier string and an array of CollectibleTypes. Below is a full list of available generic synergies and what items should be part of it. To view the existing items already present in these synergies and their effects, see [this page on the official Epiphany wiki](https://tboiepiphany.wiki.gg/wiki/Throwing_Bag#Bagged_Item_Synergies).
+While Throwing Bag has unique synergies for many notable items, it also has a wide array of synergies that group many items together, all contributing to the same bag effect. This is an easy shortcut to giving an item a Throwing Bag synergy, especially for other mods that may not want to take the time to make completely unique synergies from scratch. To contribute an item to an existing synergy, the function `Epiphany.API:AddCollectibleToCainBagSynergy(syngergyName, collectibles)` accepts an identifier string and an individual or array of CollectibleTypes. Below is a full list of available generic synergies and what items should be part of it. To view the existing items already present in these synergies and their effects, see [this page on the official Epiphany wiki](https://tboiepiphany.wiki.gg/wiki/Throwing_Bag#Bagged_Item_Synergies).
 
 ???- info "Throwing Bag generic synergies"
 	| string ID | Theme |
@@ -28,36 +28,36 @@ While Throwing Bag has unique synergies for many notable items, it also has a wi
 	|`dice_bagged`				|Demonic|
 	|`drug_bagged`				|Pills, mushrooms, syringes<br>**Please see the note at the bottom of the table.**|
 	|`explorer_bagged`			|Exploration, maps, traversal|
-	|`familiar_bagged`			|Baby-like familiars<br>**Items with the baby tag contribute to this synergy automatically**.|
+	|`familiar_bagged`			|Baby-like familiars<br>**Auto-includes items with the `baby` tag**.|
 	|`fart_bagged`				|Triggers fart effects|
 	|`fate_bagged`				|Blue Baby, Isaac's death|
 	|`fear_bagged`				|Inflicts the Fear status|
 	|`fertilizer_bagged`		|Flowers, plants, dirt|
 	|`fire_bagged`				|Inflicts the Burn status, fire, flame, hot|
-	|`flies_bagged`				|Is a fly, or spawns flies<br>**Items with the fly tag contribute to this synergy automatically**.|
+	|`flies_bagged`				|Is a fly, or spawns flies<br>**Auto-includes items with the `fly` tag**.|
 	|`gamer_bagged`				|Gamer culture and other games|
 	|`glitched_bagged`			|Glitchy|
 	|`golden_bagged`			|Gold, money, shops, greed|
-	|`guppy_bagged`				|Guppy parts<br>**Items with the guppy tag contribute to this synergy automatically**.|
+	|`guppy_bagged`				|Guppy parts<br>**Auto-includes items with the `guppy` tag**.|
 	|`harbinger_bagged`			|Horsemen of the Apocalypse|
 	|`homing_bagged`			|Grants homing tears|
 	|`isack_bagged`				|Isaac, bums, has significant importance to Isaac's life, Option items|
 	|`latex_bagged`				|Latex, razor|
 	|`lotto_bagged`				|Lottery, gambling|
 	|`luck_bagged`				|Increases Isaac's luck stat|
-	|`lunch_bagged`				|Low-quality food<br>**Items with the food tag contribute to this synergy automatically**.|
+	|`lunch_bagged`				|Low-quality food<br>**Auto-includes items with the `food` tag**.|
 	|`magnet_bagged`			|Magnet, magnetism, inflicts Magnetized status|
 	|`meal_bagged`				|High-quality food|
 	|`medical_bagged`			|Blood, bandages, medicine, surgical tools, medical conditions|
 	|`generic_milk_bagged`		|Milk|
-	|`mom_bagged`				|Mom<br>**Items with the mom tag contribute to this synergy automatically**.|
-	|`mystic_bagged`			|Planetarium, Zodiac signs, runes, fortune telling<br>**Items with the stars tag contribute to this synergy automatically**.|
+	|`mom_bagged`				|Mom<br>**Auto-includes items with the `mom` tag**.|
+	|`mystic_bagged`			|Planetarium, Zodiac signs, runes, fortune telling<br>**Auto-includes items with the `stars` tag**.|
 	|`organ_bagged`				|Organ|
 	|`paper_bagged`				|Paper, card|
 	|`petrifying_bagged`		|Inflicts the Petrify status|
 	|`piercing_bagged`			|Grants Isaac piercing tears|
 	|`poison_bagged`			|Inflicts the Poison status|
-	|`poop_bagged`				|Poop<br>**Items with the poop tag contribute to this synergy automatically**.|
+	|`poop_bagged`				|Poop<br>**Auto-includes items with the `poop` tag**.|
 	|`punching_bagged`			|Violence, Samson|
 	|`purse_bagged`				|Can be found inside a purse|
 	|`rock_bagged`				|Rock, and stone|
@@ -65,7 +65,7 @@ While Throwing Bag has unique synergies for many notable items, it also has a wi
 	|`sharps_bagged`			|Sharp|
 	|`slow_bagged`				|Inflicts the Slow status|
 	|`spectral_bagged`			|Grants Isaac spectral tears|
-	|`spider_bagged`			|Is a spider, or spawns spiders<br>**Items with the spider tag contribute to this synergy automatically**.|
+	|`spider_bagged`			|Is a spider, or spawns spiders<br>**Auto-includes items with the `spider` tag**.|
 	|`spirit_bagged`			|Spirits, ghosts, souls|
 	|`sanctum_spiritus_bagged`	|Holy spirits, significant holy items|
 	|`tool_bagged`				|Tools for various purposes|
@@ -78,6 +78,9 @@ While Throwing Bag has unique synergies for many notable items, it also has a wi
 	- `reddrug`
 	- `momspills`
 	- `whitepills`
+
+???+ Exclude auto-adding tagged items
+	In some cases you may want to create a unique synergy for an item with a specific tag that doesn't contribute to a different synergy. For this, use the function `Epiphany.API:ExcludeItemFromTagSynergy(itemTag, collectibles)` which accepts a tag from the [ItemConfig](https://wofsauge.github.io/IsaacDocs/rep/enums/ItemConfig.html) enumeration to target and an indivudal or array of CollectibleTypes.
 
 ## Throwing Bag tables
 
@@ -99,4 +102,4 @@ There are many tables associated with Throwing Bag. While not classes in the lit
 
 ## Creating custom synergies
 
-This is the part where I'd say something swagilicious
+W.I.P!

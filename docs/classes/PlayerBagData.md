@@ -25,13 +25,13 @@
 ### BagMode {: aria-label='Variables' }
 #### boolean BagMode {: .copyable aria-label='Variables' }
 
-Returns `true` if in "Throwing Bag" mode, being unable to fire tears and will throw Throwing Bags instead, if any are on the player.
+Returns `true` if in "throwing bag" mode, being unable to fire tears and will throw throwing bags instead, if any are on the player.
 
 ___
 ### CanSwing {: aria-label='Variables' }
 #### boolean CanSwing {: .copyable aria-label='Variables' }
 
-Returns `true` if the player is able to swing a Throwing Bag. Will always be true for Tarnished Cain, but otherwise is `false` if any of the following requirements are met:
+Returns `true` if the player is able to swing a throwing bag. Will always be true for Tarnished Cain, but otherwise is `false` if any of the following requirements are met:
 
 - Curse mist is active
 - Bag queue is empty
@@ -75,7 +75,7 @@ ___
 ### BagPocketCharge {: aria-label='Variables' }
 #### float BagPocketCharge {: .copyable aria-label='Variables' }
 
-Active item charge for Throwing Bag. Only used for Tarnished Cain.
+Active item charge for throwing bag. Only used for Tarnished Cain.
 
 ___
 ### LastRecallCount {: aria-label='Variables' }
