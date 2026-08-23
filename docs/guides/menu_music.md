@@ -1,4 +1,4 @@
-Epiphany's addition of the tarnished characters to the main menu comes with a brand new soundtrack to match the vanilla theme. Under the circumstance that you have a soundtrack mod and make a tarnished version of the menu theme to be compatible with Epiphany, this article will briefly go over updating the menu music yourself.
+Epiphany's addition of the tarnished characters to the main menu comes with a brand new soundtrack to match the vanilla theme. Under the circumstance that you have a soundtrack mod and make a tarnished version of the menu theme to be compatible with Epiphany, this guide will briefly go over updating the menu music yourself.
 
 ## music.xml
 
