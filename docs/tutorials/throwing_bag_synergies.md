@@ -86,16 +86,16 @@ There are many tables associated with Throwing Bag. While not classes in the lit
 ???+ note "VSCode autocomplete"
 	If you don't want to constantly look back at this documentation while working on custom synergies, it is recommended to use the [Isaac Lua Extention for VSCode](https://marketplace.visualstudio.com/items?itemName=Filloax.isaac-lua-api-vscode). Throwing Bag's file contains EmmyLua annotations for all of these classes. These can be stored in any Lua file, but it is recommended to use a `globals.lua` file at the root of your mod folder, as [sumneko's VSCode Lua extension](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) detects this file for manually defining and recognizing global variables.
 
-- [BagData](../classes/)
-- [BagMetaData](../classes//BagMetaData.md)
-- [BagsInfo](../classes//BagsInfo.md)
-- [BagSwingParams](../classes//BagSwingParams.md)
-- [BurstParamsConfig](../classes//BurstParamsConfig.md)
-- [ImpactBurstParams](../classes//ImpactBurstParams.md)
-- [PlayerBagData](../classes//PlayerBagData.md)
-- [PlayerSwingParams](../classes//PlayerSwingParams.md)
-- [SwingingBagData](../classes//SwingingBagData.md)
-- [ThrownBagData](../classes//ThrownBagData.md)
+- [BagData](../classes/BagData.md)
+- [BagMetaData](../classes/BagMetaData.md)
+- [BagsInfo](../classes/BagsInfo.md)
+- [BagSwingParams](../classes/BagSwingParams.md)
+- [BurstParamsConfig](../classes/BurstParamsConfig.md)
+- [ImpactBurstParams](../classes/ImpactBurstParams.md)
+- [PlayerBagData](../classes/PlayerBagData.md)
+- [PlayerSwingParams](../classes/PlayerSwingParams.md)
+- [SwingingBagData](../classes/SwingingBagData.md)
+- [ThrownBagData](../classes/ThrownBagData.md)
 
 ## Creating custom synergies
 

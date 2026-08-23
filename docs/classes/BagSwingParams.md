@@ -7,6 +7,7 @@
 	- Epiphany.Item.THROWING_BAG:CreateSwingingBag(player, bagsInfo, bagId)
 
 	???+ example "Example Code"
+
 		```Lua
 		local THROWING_BAG = Epiphany.Item.THROWING_BAG
 		local SWING_BAG_VARIANT = THROWING_BAG.SWINGING_BAG_EFFECT
@@ -21,19 +22,19 @@
 
 ## Variables
 
-### SwingingAngle () {: aria-label='Variables' }
+### SwingingAngle {: aria-label='Variables' }
 #### number SwingingAngle {: .copyable aria-label='Variables' }
 
 Current rotational angle of the bag.
 
 ___
-### SwingingEnemyCollisionCooldown () {: aria-label='Variables' }
+### SwingingEnemyCollisionCooldown {: aria-label='Variables' }
 #### table SwingingEnemyCollisionCooldown {: .copyable aria-label='Variables' }
 
 Map of entity indexes to a cooldown. Enemies cannot be hit with the bag while this number is above `0`.
 
 ___
-### BaggedBombs () {: aria-label='Variables' }
+### BaggedBombs {: aria-label='Variables' }
 #### [EntityBomb](https://repentogon.com/EntityBomb.html)[] BaggedBombs {: .copyable aria-label='Variables' }
 
 Array of EntityBombs held inside the bag.

@@ -16,12 +16,12 @@ nav:
     - "SwingingBagData": classes/SwingingBagData.md
     - "ThrownBagData": classes/ThrownBagData.md
   - Tutorials:
-    - "Table structure": tutorials/table_structure.md
     - "Adding a Character": tutorials/adding_a_character.md
     - "Item pools": tutorials/item_pools.md
     - "Item tags": tutorials/item_tags.md
     - "Turnover shops": tutorials/turnover_shops.md
     - "Throwing Bag": tutorials/throwing_bag_synergies.md
+    - "Menu music": tutorials/menu_music.md
 theme:
   name: material
   custom_dir: overrides

@@ -2,11 +2,28 @@ Everything for Epiphany is accessed through the `Epiphany` global. From here, it
 
 Below are all the main tables Epiphany holds that a modder may need to access, the tables they hold, and the variables that can be consistently found through all of them. Further information on these tables or others not listed here should be found by searching through the game's codebase directly.
 
-## Epiphany.Character
-???+ info "PlayerTypes"
-	For accessing the player type ID of a character, use `Epiphany.PlayerType.CHARACTER_NAME`. The values here apply to PlayerType as well.
+## Epiphany.PlayerType
 
-	The exceptions to this are different forms of Tarnished Judas, accessed through JUDAS_1 (Scorched), JUDAS_2 (Half Scorched), JUDAS_4 (Half Fractured), JUDAS_5 (Fractured).
+- BETHANY
+- BLUEBABY
+- CAIN
+- EDEN
+- ISAAC
+- JUDAS
+- JUDAS_1
+- JUDAS_2
+- JUDAS_4
+- JUDAS_5
+- KEEPER
+- LOST
+- MAGDALENE
+- SAMSON
+
+## Epiphany.Character
+
+???+ info
+	Holds all code associated with the character. PlayerTypes should be accessed with `Epiphany.PlayerType`.
+
 - BETHANY
 - BLUEBABY
 - CAIN
@@ -19,12 +36,15 @@ Below are all the main tables Epiphany holds that a modder may need to access, t
 - SAMSON
 
 ## Epiphany.Item
-???+ info "Item structure"
-	The following variables may be accessed through `Epiphany.Item`. Variables that may not be present are marked with *:
 
-	- `ID`: Holds the CollectibleType ID.
-	- `ID2, ID3, AllIDs`*: Exclusive to Divine Remnants, as its levels are registered as three separate items. `ID2` and `ID3` are the second and third levels of Divine Remnants. `AllIDs` is an array of all three IDs.
-	- `FAMILIAR`*: Holds the FamiliarVariant, if a familiar is involved.
+???+ info "Item structure"
+	The following can be accessed through the variables under `Epiphany.Item`:
+
+	|Variable Name|Possible values|Description|
+	|:--|:--|:--|
+	|ID|integer|CollectibleType ID|
+	|FAMILIAR|integer|Holds the FamiliarVariant, if a familiar is involved|
+
 - ACTIVE_SACK
 - AIR_CONDITIONER
 - ANAL_FISSURE
@@ -120,8 +140,10 @@ Below are all the main tables Epiphany holds that a modder may need to access, t
 - ZIP_BOMBS
 
 ## Epiphany.Trinket
+
 ???+ info "TrinketType"
 	The TrinketType ID is accessed through `Epiphany.Trinket.TRINKET_NAME.ID`.
+
 - BETHS_ORDEAL
 - BLACK_KEY
 - CEREMONIAL_BOWL
@@ -135,12 +157,16 @@ Below are all the main tables Epiphany holds that a modder may need to access, t
 - ROPES
 
 ## Epiphany.Card
-???+ info "Card structure"
-	The following variables may be accessed through `Epiphany.Card`. Variables that may not be present are marked with *:
 
-	- `ID`: Holds the Card ID.
-	- `SFX`: Announcer voiceline when using the card.
-	` `SFX_ALT`*: Alternate announcer voiceline that plays rarely.
+???+ info "Card structure"
+	The following can be accessed through the variables under `Epiphany.Card`:
+
+	|Variable Name|Possible values|Description|
+	|:--|:--|:--|
+	|ID|integer|Card ID|
+	|SFX|integer|Announcer voiceline when using the card|
+	|SFX_ALT|integer|Optional. Alternate announcer voiceline that plays rarely|
+
 - AGAINST_HUMANITY
 - DEBIT_CARD
 - DRAWN_CARD
@@ -162,12 +188,15 @@ Below are all the main tables Epiphany holds that a modder may need to access, t
 - SMALL_RAZOR
 
 ## Epiphany.Essence
-???+ info "Essence structure"
-	The following variables may be accessed through `Epiphany.Essence`. Variables that may not be present are marked with *:
 
-	- `ID`: Holds the Essence ID.
-	- `SFX`: Announcer voiceline when using the essence.
-	` `SFX_ALT`*: Alternate announcer voiceline that plays rarely.
+???+ info "Essence structure"
+	The following can be accessed through the variables under `Epiphany.Essence`:
+
+	|Variable Name|Possible values|Description|
+	|:--|:--|:--|
+	|ID|integer|Essence ID|
+	|SFX|integer|Announcer voiceline sound ID when using the essence|
+	|SFX_ALT|integer|Optional. Alternate announcer voiceline sound ID that plays rarely|
 - BAGGED
 - BETHANY
 - BLUEBABY
@@ -181,13 +210,16 @@ Below are all the main tables Epiphany holds that a modder may need to access, t
 - SAMSON
 
 ## Epiphany.Capsule
-???+ info "Capsule structure"
-	The following variables may be accessed through `Epiphany.Capsule`. Variables that may not be present are marked with *:
 
-	- `ID`: Holds the Capsule ID.
-	- `SFX`: Announcer voiceline when using the capsule.
-	` `WEIGHT`: Alternate announcer voiceline that plays rarely.
-	- `MOD`*: If belonging to another mod, contains a string of the mod's name. By default, Epiphany and Fiend Folio are used.
+???+ info "Capsule structure"
+	The following can be accessed through the variables under `Epiphany.Capsule`:
+
+	|Variable Name|Possible values|Description|
+	|:--|:--|:--|
+	|ID|Capsule||
+	|SFX|integer|Announcer voiceline sound ID when using the capsule|
+	|WEIGHT|float|Alternate announcer voiceline sound ID that plays rarely|
+	|MOD|string|Optional. If belonging to another mod, contains the mod's name. By default, `"Epiphany"` and `"Fiend Folio"` are used|
 - AZURITE_SPINDOWN
 - D1
 - D10
@@ -210,8 +242,10 @@ Below are all the main tables Epiphany holds that a modder may need to access, t
 - SPINDOWN_DICE
 
 ## Epiphany.Slot
+
 ???+ info "SlotVariant"
 	The SlotVariant ID is accessed through `Epiphany.Slot.SLOT_NAME.ID`.
+
 - ALTAR
 - CONVERTER_BEGGAR
 - DICE_MACHINE
@@ -223,8 +257,10 @@ Below are all the main tables Epiphany holds that a modder may need to access, t
 - TURNOVER_RESTOCK
 
 ## Epiphany.Pickup
+
 ???+ info "PickupVariant"
 	The PickupVariant ID is accessed through `Epiphany.Slot.SLOT_NAME.ID`.
+
 - BLUE_BROKEN_HEART
 - BOMB_SACK
 - BROKEN_HEART
@@ -257,16 +293,20 @@ Below are all the main tables Epiphany holds that a modder may need to access, t
 - WHEAT
 
 ## Epiphany.Grid
+
 - TWISTED_ROCK
 	- Has the type `GridEntityType.GRID_ROCK` and variant `TWISTED_ROCK.ID`.
 - WISP_HIVE
 	- Identified by save data that can be checked with `WISP_HIVE:IsWispHive(fire)`.
 
 ## Epiphany.Npc
+
 ???+ info "PickupVariant"
 	The EntityType ID is accessed through `Epiphany.Npc.NPC_NAME.ID`.
+
 ???+ info "Revolt"
 	`KNIGHT`, `GRUNT`, `BRUTE`, and `COMMANDER` each contain `ID` and `Variant` for the EntityType and variant.
+
 - ABEL
 - EDEN_GLITCH
 - REVOLT
@@ -277,16 +317,20 @@ Below are all the main tables Epiphany holds that a modder may need to access, t
 - SHADOW_MIRAGE
 
 ## Epiphany.Challenge
-???- info "Challenge structure"
-	The following variables may be accessed through `Epiphany.Challenge`. Variables that may not be present are marked with *:
 
-	- `Name`: Name of the challenge. Used for the DSS achievement viewer.
-	- `SortOrder`: Sort order inside the DSS achievement viewer.
-	- `ID`: Challenge ID.
-	- `Character`: Name of the character that starts in this challenge in all caps. Used to associate the challenge unlock with a character unlock
-	- `UnlockReq`: The name of something else to be unlocked to unlock the challenge. Used for the DSS achievement viewer, currently exclusively unlocked with tarnished characters.
-	- `Unlock`: Name of the achievement unlocked by beating the challenge.
-	- `func`*: Function that passes the player. Called during [MC_PLAYER_INIT_POST_LEVEL_INIT_STATS](https://repentogon.com/enums/ModCallbacks.html#mc_player_init_post_level_init_stats) during the respective challenge.
+???- info "Challenge structure"
+	The following can be accessed through the variables under `Epiphany.Challenge`:
+
+	|Variable Name|Possible values|Description|
+	|:--|:--|:--|
+	|Name| Used for the DSS achievement viewer|
+	|SortOrder| Used for DSS achievement viewer|
+	|ID|integer|Challenge ID|
+	|Character|string|Name of the character that starts in this challenge in all caps. Used to associate the challenge unlock with a character unlock|
+	|UnlockReq|string|The name of something else to be unlocked to unlock the challenge. Used for the DSS achievement viewer, currently exclusively unlocked with tarnished characters|
+	|Unlock|string|Name of the achievement unlocked by beating the challenge|
+	|func|function|Function that passes the player. Called during [MC_PLAYER_INIT_POST_LEVEL_INIT_STATS](https://repentogon.com/enums/ModCallbacks.html#mc_player_init_post_level_init_stats) during the respective challenge|
+
 - DEALMAKER
 - DONDE_ESTA_LA_BIBLIOTECA
 - EMPEROR_OF_FLIES
@@ -300,12 +344,14 @@ Below are all the main tables Epiphany holds that a modder may need to access, t
 - RETRIBUTION_CHALLENGE
 
 ## Epiphany.PickupPrice
+
 - PRICE_HEART_DEBT: PickupPrice,
 - PRICE_KEYS: PickupPrice,
 - PRICE_TWO_BLUE_BROKEN_HEARTS: PickupPrice,
 - PRICE_TWO_BROKEN_HEARTS: PickupPrice,
 
 ## Epiphany.Rooms
+
 - ATTIC
 - BATHROOM
 - BETHANY_ENDING
@@ -314,6 +360,14 @@ Below are all the main tables Epiphany holds that a modder may need to access, t
 - ROOM_MANAGER
 
 ## Epiphany.MiscFamiliar
+
+???+ info "MiscFamiliar structure"
+	The following can be accessed through the variables under `Epiphany.MiscFamiliar`:
+
+	|Variable Name|Possible values|Description|
+	|:--|:--|:--|
+	|ID|integer|The variant or subtype of the familiar, depending on the entity.|
+
 - BLOOD_BABY_IRONCLAD
 	- Variant: `FamiliarVariant.BLOOD_BABY`, Subtype: Table's `ID`.
 - FLY_HOLY

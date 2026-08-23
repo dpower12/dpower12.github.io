@@ -6,32 +6,33 @@
 	- Epiphany.Item.THROWING_BAG:GetPlayerSwingParams(player)
 
 	???+ example "Example Code"
+
 		```Lua
 		local playerBagData = Epiphany.Item.THROWING_BAG:GetPlayerSwingParams(Isaac.GetPlayer())
 		```
 
 ## Variables
 
-### SwingingDuration () {: aria-label='Variables' }
+### SwingingDuration {: aria-label='Variables' }
 #### integer SwingingDuration {: .copyable aria-label='Variables' }
 
-Returns `0` if the player is not swinging any Throwing Bags, and increments by `player.ShotSpeed` otherwise, with a limit defined by [SwingingDurationCap](#SwingingDurationCap).
+Returns `0` if the player is not swinging any Throwing Bags, and increments by `player.ShotSpeed` otherwise, with a limit defined by [SwingingDurationCap](#swingdurationcap).
 
 While swung, used to modify certain attributes like the position and length of the bag, as well as pitch of swinging sounds.
 
 ___
 
-### SwingingBagRef () {: aria-label='Variables' }
+### SwingingBagRef {: aria-label='Variables' }
 #### [EntityEffect](https://repentogon.com/EntityEffect.html)[] SwingingBagRef {: .copyable aria-label='Variables' }
 
 Array of Throwing Bag entities currently being swung.
 
 ___
-### SwingingDirection () {: aria-label='Variables' }
+### SwingingDirection {: aria-label='Variables' }
 #### float SwingingDirection {: .copyable aria-label='Variables' }
 
 ___
-### SwingDurationCap () {: aria-label='Variables' }
+### SwingDurationCap {: aria-label='Variables' }
 #### float SwingDurationCap {: .copyable aria-label='Variables' }
 
 The defined cap for [SwingignDuration](#swingingduration).

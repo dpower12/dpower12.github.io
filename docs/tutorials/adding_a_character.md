@@ -136,7 +136,7 @@ Adding your tarnished to Epiphany's API uses the function `Epiphany.API.AddChara
 |charID|integer|PlayerType of your tarnished using [Isaac.GetPlayerTypeByName](https://wofsauge.github.io/IsaacDocs/rep/Isaac.html#getplayertypebyname)|
 |playerAnm2|string|Path to an anm2 file that your tarnished will use in place of the default player anm2. See Epiphany's own player anm2 files in `gfx/characters/` as a reference to copy from|
 |taintedID|integer|PlayerType of the associated tainted using [Isaac.GetPlayerTypeByName](https://wofsauge.github.io/IsaacDocs/rep/Isaac.html#getplayertypebyname). **If this variable is not provided**, it will attempt to look for the first available tainted character from your mod. If found, your tarnished will be placed at that tainted's position on the character wheel. If no tainteds can be found, they will not be registered to the tarnished menu|
-|menuGraphics|string|File path to the anm2 file that contains menu assets. See [Menu sprites](#menu-sprites)|
+|menuGraphics|string|File path to the anm2 file that contains menu assets. See [Menu sprites](#content-foldermenu-assets)|
 |unlockChecker|function|Doesn't pass any arguments. Return a `boolean` for whether or not the tarnished is unlocked|
 |floorTutorial|string|Path to an anm2 file. Must have one animation named "Tutorial" that holds the character tutorial. Unlike vanilla, does not support dynamic input sprites, so it must display keys manually|
 |charStats|table|Accepts (bool)`FLYING`, (TearFlags)`TEAR_FLAGS`, (Color)`TEAR_COLOR`, and (Color)`LASER_COLOR` as variables inside the table. More are available, but remain for backwards compatibility pre-Wave 8|

@@ -5,6 +5,6 @@ search:
 # Epiphany API Docs
 **Version: 8.0**
 
-Epiphany has a lot of systems in place, and most notably, Tarnished Characters! A mod with its size naturally will call for mod compatibility. To help with streamlining this process, Epiphany introduced an API for other modders to interact with that covers the majority of Epiphany's systems. This site documents everything Epiphany's API has to offer and everything a modder would need to know for adding compatibility.
+Epiphany is an expansive mod packed with items, trinkets, challenges, and its highlighted feature: Tarnished Characters. A mod this size naturally will call for mod compatibility. To help with streamlining this process, Epiphany has an API for other modders to interact with every corner of the mod's contents. This site documents everything Epiphany's API has to offer and everything a modder would need to know for adding compatibility.
 
 If you're looking about detailed information on Epiphany's added content such as characters, items, and more, please see the [official Epiphany wiki](https://tboiepiphany.wiki.gg/wiki/TBOI:_The_Epiphany_Mod_Wiki).
