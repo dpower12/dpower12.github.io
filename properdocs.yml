@@ -4,7 +4,10 @@ nav:
   - Docs:
     - Mod Global: globals.md
     - Enums:
+      - "CrimsonWispMaturity": enums/CrimsonWispMaturity.md
+      - "CrimsonWispType": enums/CrimsonWispType.md
       - "ExtraCallbacks": enums/ExtraCallbacks.md
+      - "RoomClearType": enums/RoomClearType.md
     - "BagData": classes/BagData.md
     - "BagMetaData": classes/BagMetaData.md
     - "BagsInfo": classes/BagsInfo.md
