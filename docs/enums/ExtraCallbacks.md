@@ -115,7 +115,7 @@ Called after a throwing bag is thrown. Accepts no return parameters.
 
 |Name|Function Args|Optional Args|Return Type|
 |:--|:--|:--|:--|
-|CAIN_POST_BAG_THROW {: .copyable } | ([EntityEffect](https://repentogon.com/EntityEffect.html) ThrownBag, [BagData]((../classes/BagData.md)) | - | void |
+|CAIN_POST_BAG_THROW {: .copyable } | ([EntityEffect](https://repentogon.com/EntityEffect.html) ThrownBag, [BagData]((../classes/BagData.md))) | - | void |
 
 ### CAIN_POST_BAG_HIT {: .copyable }
 
