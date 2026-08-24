@@ -303,6 +303,27 @@ Can pass up to two optional arguments inside the AddExtraCallback function.
 |:--|:--|:--|:--|
 |SAMSON_PRE_CONSUME_HEART {: .copyable } | ([EntityPlayer](https://repentogon.com/EntityPlayer.html), [EntityPickup](https://repentogon.com/EntityPickup.html) Heart, integer TokensGained) | [PickupVariant](https://wofsauge.github.io/IsaacDocs/rep/enums/PickupVariant.html), [HeartSubType](https://wofsauge.github.io/IsaacDocs/rep/enums/HeartSubType.html) | integer or boolean |
 
+### MAGDALENE_PRE_CONSUME_HEART {: .copyable }
+
+Called before Tarnished Magdalene consumes a heart pickup for her bonus heart meter. Restricted to red hearts.
+
+Accepts returning an integer to change the number of bonus hearts gained from the heart, or `false` to prevent consuming the heart.
+
+Can pass up to two optional arguments inside the AddExtraCallback function.
+
+???- example "Example Code"
+	Runs a MAGDALENE_PRE_CONSUME_HEART callback only for Soul Hearts:
+
+	```Lua
+	Epiphany:AddExtraCallback(Epiphany.ExtraCallbacks.MAGDALENE_PRE_CONSUME_HEART, function(_, player, heart, tokens)
+
+	end, PickupVariant.PICKUP_HEART, HeartSubType.HEART_FULL)
+	```
+
+|Name|Function Args|Optional Args|Return Type|
+|:--|:--|:--|:--|
+|MAGDALENE_PRE_CONSUME_HEART {: .copyable } | ([EntityPlayer](https://repentogon.com/EntityPlayer.html), [EntityPickup](https://repentogon.com/EntityPickup.html) Heart, integer BonusHeartsGained) | [PickupVariant](https://wofsauge.github.io/IsaacDocs/rep/enums/PickupVariant.html), [HeartSubType](https://wofsauge.github.io/IsaacDocs/rep/enums/HeartSubType.html) | integer or boolean |
+
 ### PLAYER_DAMAGED_ENTITY {: .copyable }
 
 Called when the player has inflicted damage onto an entity.
