@@ -2,7 +2,7 @@
 tags:
   - Enum
 ---
-# Enum "Epiphany.CrimsonWispType"
+# Enum "CrimsonWispType"
 
 |Value|Enumerator|Comment|
 |:--|:--|:--|

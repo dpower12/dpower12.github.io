@@ -1,4 +1,4 @@
-# Enum "Epiphany.ExtraCallbacks"
+# Enum "ExtraCallbacks"
 
 This is a list of all new callbacks added by Epiphany. Instead of using your mod reference, call the function `Epiphany:AddExtraCallback` or `Epiphany:AddExtraPriorityCallback` with the same parameters. The enums themselves are accessible through `Epiphany.ExtraCallbacks`.
 
@@ -99,7 +99,7 @@ Called after a new Throwing Bag is created. Accepts no return parameters.
 
 |Name|Function Args|Optional Args|Return Type|
 |:--|:--|:--|:--|
-|CAIN_POST_CREATE_BAG {: .copyable } | ([EntityPlayer](https://repentogon.com/EntityPlayer.html), [BagsInfo](../classes/BagsInfo.md), [BagData]((../classes/BagData.md), string NewBagID)) | - | void |
+|CAIN_POST_CREATE_BAG {: .copyable } | ([EntityPlayer](https://repentogon.com/EntityPlayer.html), [BagsInfo](../classes/BagsInfo.md), [BagData](../classes/BagData.md), string NewBagID) | - | void |
 
 ### CAIN_POST_SWING_HIT {: .copyable }
 
@@ -115,7 +115,7 @@ Called after a throwing bag is thrown. Accepts no return parameters.
 
 |Name|Function Args|Optional Args|Return Type|
 |:--|:--|:--|:--|
-|CAIN_POST_BAG_THROW {: .copyable } | ([EntityEffect](https://repentogon.com/EntityEffect.html) ThrownBag, [BagData]((../classes/BagData.md))) | - | void |
+|CAIN_POST_BAG_THROW {: .copyable } | ([EntityEffect](https://repentogon.com/EntityEffect.html) ThrownBag, [BagData](../classes/BagData.md)) | - | void |
 
 ### CAIN_POST_BAG_HIT {: .copyable }
 
@@ -272,7 +272,7 @@ Called before a stationary or thrown boulder has its sprite initialized.
 
 Accepts returning a table of any combination of the following variables to modify the boulder sprite:
 
-- `Anm2`: String path to the anm2 to use for the boulder, or nil to use the default
+- `Anm2`: String path to the anm2 to use for the boulder, or `nil` to use the default.
 - `ThrownAnm2`: String path to the anm2 to use for the boulder when it's thrown, or `nil` to use the default.
 - `Spritesheet`: String path to the spritesheet to use for the boulder.
 - `Priority`: Number denoting how important this sprite is. Higher numbers override lower numbers.
@@ -315,7 +315,7 @@ Can pass up to two optional arguments inside the AddExtraCallback function.
 	Runs a MAGDALENE_PRE_CONSUME_HEART callback only for Soul Hearts:
 
 	```Lua
-	Epiphany:AddExtraCallback(Epiphany.ExtraCallbacks.MAGDALENE_PRE_CONSUME_HEART, function(_, player, heart, tokens)
+	Epiphany:AddExtraCallback(Epiphany.ExtraCallbacks.MAGDALENE_PRE_CONSUME_HEART, function(_, player, heart, bonusHearts)
 
 	end, PickupVariant.PICKUP_HEART, HeartSubType.HEART_FULL)
 	```
@@ -345,7 +345,7 @@ Triggers on [MC_POST_SLOT_UPDATE](https://repentogon.com/enums/ModCallbacks.html
 
 |Name|Function Args|Optional Args|Return Type|
 |:--|:--|:--|:--|
-|SLOT_ON_DEATH {: .copyable } | ([EntitySlot](https://repentogon.com/EntitySlot.html)) | [SlotVariant](repentogon.com/enums/SlotVariant.html) | void |
+|SLOT_ON_DEATH {: .copyable } | ([EntitySlot](https://repentogon.com/EntitySlot.html)) | [SlotVariant](https://repentogon.com/enums/SlotVariant.html) | void |
 
 ### POST_GRID_UPDATE {: .copyable }
 
@@ -426,7 +426,7 @@ Called for every room clear-like event: room clear, challenge room wave, boss ru
 
 |Name|Function Args|Optional Args|Return Type|
 |:--|:--|:--|:--|
-|POST_ROOM_CLEAR {: .copyable } | ([RoomClearType](RoomClearType.md)) | [RoomClearType](RoomClearType.md) | void |
+|POST_ROOM_CLEAR {: .copyable } | ([RoomClearType](Epiphany.RoomClearType.md)) | [RoomClearType](Epiphany.RoomClearType.md) | void |
 
 ### PRE_MULTITOOL_OPEN_CHEST {: .copyable }
 
@@ -523,7 +523,7 @@ Called after a Crimson Wisp matures by one stage. Accepts no return arguments.
 
 |Name|Function Args|Optional Args|Return Type|
 |:--|:--|:--|:--|
-|CRIMSON_WISP_GROWTH {: .copyable } | ([EntityFamiliar](https://repentogon.com/EntityFamiliar.html) Wisp) | [CrimsonWispType](CrimsonWispType.md) | void |
+|CRIMSON_WISP_GROWTH {: .copyable } | ([EntityFamiliar](https://repentogon.com/EntityFamiliar.html) Wisp) | [CrimsonWispType](Epiphany.CrimsonWispType.md) | void |
 
 ### RULES_CARD_GET_ROOM_TYPE {: .copyable }
 

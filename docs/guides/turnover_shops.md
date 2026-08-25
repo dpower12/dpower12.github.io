@@ -160,7 +160,7 @@ Turnover has callbacks for the following:
 - Changing the price to setup/upgrade a shop, or stopping one from spawning altogether
 - After a shop is created
 
-You can read more about these callbacks on the [ExtraCallbacks](../enums/ExtraCallbacks.md) page.
+You can read more about these callbacks on the [ExtraCallbacks](../enums/Epiphany.ExtraCallbacks.md) page.
 
 ## Custom Shopkeeper
 

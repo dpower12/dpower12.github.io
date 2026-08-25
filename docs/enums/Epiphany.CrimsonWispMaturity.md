@@ -2,7 +2,7 @@
 tags:
   - Enum
 ---
-# Enum "Epiphany.CrimsonWispMaturity"
+# Enum "CrimsonWispMaturity"
 
 |Value|Enumerator|Comment|
 |:--|:--|:--|

@@ -4,10 +4,13 @@ nav:
   - Docs:
     - Mod Global: globals.md
     - Enums:
-      - "CrimsonWispMaturity": enums/CrimsonWispMaturity.md
-      - "CrimsonWispType": enums/CrimsonWispType.md
-      - "ExtraCallbacks": enums/ExtraCallbacks.md
-      - "RoomClearType": enums/RoomClearType.md
+      - "CardGroup": enums/Epiphany.API.CardGroup.md
+      - "HeartGroup": enums/Epiphany.API.HeartGroup.md
+      - "SlotGroup": enums/Epiphany.API.SlotGroup.md
+      - "CrimsonWispMaturity": enums/Epiphany.CrimsonWispMaturity.md
+      - "CrimsonWispType": enums/Epiphany.CrimsonWispType.md
+      - "ExtraCallbacks": enums/Epiphany.ExtraCallbacks.md
+      - "RoomClearType": enums/Epiphany.RoomClearType.md
     - "BagData": classes/BagData.md
     - "BagMetaData": classes/BagMetaData.md
     - "BagsInfo": classes/BagsInfo.md
@@ -22,12 +25,12 @@ nav:
     - "Adding a Character": guides/adding_a_character.md
     - "Item pools": guides/item_pools.md
     - "Item tags": guides/item_tags.md
-    - "Turnover shops": guides/turnover_shops.md
-    - "Throwing Bag": guides/throwing_bag_synergies.md
     - "Menu music": guides/menu_music.md
+    - "Throwing Bag": guides/throwing_bag_synergies.md
+    - "Turnover shops": guides/turnover_shops.md
+    - "Object groups": guides/object_groups.md
 theme:
   name: material
-  custom_dir: overrides
   favicon: img/epiphany_favicon.ico
   icon:
     repo: fontawesome/brands/github
@@ -79,9 +82,6 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-      options:
-        custom_icons:
-          - overrides/.icons
   - pymdownx.tabbed:
       alternate_style: true
   - attr_list

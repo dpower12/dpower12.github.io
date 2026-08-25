@@ -2,7 +2,7 @@
 tags:
   - Enum
 ---
-# Enum "Epiphany.RoomClearType"
+# Enum "RoomClearType"
 
 |Value|Enumerator|Comment|
 |:--|:--|:--|
