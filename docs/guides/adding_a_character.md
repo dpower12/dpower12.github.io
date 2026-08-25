@@ -126,7 +126,11 @@ Epiphany allows you to assign specific collectibles and trinkets to your tarnish
 
 ## Registering the tarnished
 
-Adding your tarnished to Epiphany's API uses the function `Epiphany.API.AddCharacter`. It accepts one argument; a table of parameters that holds information on your character:
+Adding your tarnished to Epiphany's API uses the following function:
+
+```Lua
+Epiphany.API.AddCharacter(charInfo: table)
+```
 
 ???+ info "Required variables"
 	`charName`, `charID`, `playerAnm2`, and `menuGraphics` are required variables. `taintedID` is not enforced, but is recommended. All other variables are optional

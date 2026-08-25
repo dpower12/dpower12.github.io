@@ -5,7 +5,11 @@
 ## Adding your custom Turnover Shop
 
 ### Variables
-Turnover shops are added through the function `Epiphany.API:AddTurnoverShop`, which accepts a table, which should hold the following variables:
+Turnover shops are added through the following function:
+
+```Lua
+Epiphany.API:AddTurnoverShop(shopInfo: table)
+```
 
 | Variable Name | Possible Values | Description |
 |:--|:--|:--|

@@ -102,4 +102,76 @@ There are many tables associated with Throwing Bag. While not classes in the lit
 
 ## Creating custom synergies
 
-W.I.P!
+Adding synergies is done through one largely customizable function:
+
+```Lua
+function Epiphany.API:AddCainBagSynergy(synergyName: string, synergyTable:table): table
+```
+
+`synergyName` can be anything so long as it does not conflict with an existing synergy name. The usual naming convention for Throwing Bag synergies within Epiphany is using snake case, the name of the item os group name, and whether its bagged, passive, or universal. For example, a bagged synergy for Binge Eater would be `"binge_eater_bagged"`, and a passive synergy for brimstone would be `"brimstone_passive"`.
+
+`synergyTable` will be split into two sections: Basic variables, and callback variables. The callbacks may have their system improved in the future (notably, becoming actual callbacks), but their current implementation will still be covered. There are also actual Throwing bag-related callbacks, which you can find [here](../enums/Epiphany.ExtraCallbacks.md).
+
+### Basic variables
+
+???+ info "Throwing Bag synergy variables"
+	|Variable Name|Possible values|Description|
+	|:--|:--|:--|
+	|id_list|[CollectibleType](https://wofsauge.github.io/IsaacDocs/rep/enums/CollectibleType.html)[]|**Required**. List of collectibles that contribute to the synergy.
+	|flags|[BagSynergyFlags](../enums/Epiphany.API.BagSynergyFlags.md)|**Required**. Determines synergy behaviour of when its active.
+	|sprite_path|string or function|Can be a string path to an anm2 file for the throwing bag, or a function, which is structured like so:<br>fun([EntityPlayer](https://repentogon.com/EntityPlayer.html), [BagData](../classes/BagData.md), [BagsInfo](../classes/BagsInfo.md)):string?|nil
+	|color|[Color](https://repentogon.com/Color.html)|Color applied to the bag. If more than one item in a bag has a color assigned, the color will be lerped between them|
+	|burst_color|[Color](https://repentogon.com/Color.html)|Color of tears spawned when the bag impacts a wall, obstacle, or enemy|
+	|burst_params|[BurstParamsConfig](../classes/BurstParamsConfig.md)|List of parameters for customizing the tears that spawn when the bag impacts a wall, obstacle, or enemy|
+	|callback_priority|integer|Determines the order in which the callbacks are called. Higher priority values go first. Applies to all callbacks added in the table
+	|gfx_priority|[BagGFXPriority](../enums/Epiphany.API.BagGFXPriority.md)|Determines priority of synergy graphics. Higher priority values go first|
+	|parent|string|Name of existing synergy to parent this synergy to. Will inherent all properties from the parent synergy|
+
+### Callback variables
+
+Some of these callbacks can already be found as actual callbacks under [Epiphany.ExtraCallback](../enums/Epiphany.ExtraCallbacks.md), but serve as for more generic cases, while the callbacks here only run for the assigned synergy. None of these callbacks accept any return parameters.
+
+???+ info "Throwing Bag callback synergy variables"
+
+	- `callback_swing`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), count:integer, player:[EntityPlayer](https://repentogon.com/EntityPlayer.html), bagData:[SwingingBagData](../classes/SwingingBagData.md))
+		<br>Called when the bag starts swinging.
+	- `callback_pre_swing`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), count:integer, player:[EntityPlayer](https://repentogon.com/EntityPlayer.html), bagData:[SwingingBagData](../classes/SwingingBagData.md))
+		<br>Called right before `callback_swing`. Can be used to modify bag contents.
+	- `callback_swing_update`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), count:integer, player:[EntityPlayer](https://repentogon.com/EntityPlayer.html), bagData:[SwingingBagData](../classes/SwingingBagData.md))
+		<br>Called every frame for each bag that is swinging.
+	- `callback_post_bomb_insert`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), bomb:[EntityBomb](https://repentogon.com/EntityBomb.html), count:integer, player:[EntityPlayer](https://repentogon.com/EntityPlayer.html), bagData:[SwingingBagData](../classes/SwingingBagData.md))
+		<br>Called when a bomb is inserted into the bag.
+	- `callback_throw`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), count:integer, bagData:[ThrownBagData](../classes/ThrownBagData.md))
+		<br>Called when the bag is thrown.
+	- `callback_pre_throw`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), count:integer, bagData:[ThrownBagData](../classes/ThrownBagData.md))
+		<br>Called right before `callback_throw`. Can be used to modify bag contents.
+	- `callback_flying`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), count:integer, bagData:[ThrownBagData](../classes/ThrownBagData.md))
+		<br>Called every frame while the bag is flying.
+	- `callback_update`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), count:integer, bagData:[ThrownBagData](../classes/ThrownBagData.md))
+		<br>Called every frame while thrown bag is flying or on the ground.
+	- `callback_pre_hit`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), count:integer, entity:[Entity](https://repentogon.com/Entity.html), bagData:[ThrownBagData](../classes/ThrownBagData.md))
+		<br>Called before thrown bag hits an entity.
+	- `callback_post_hit`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), count:integer, entity:[Entity](https://repentogon.com/Entity.html), bagData:[ThrownBagData](../classes/ThrownBagData.md), dmgDealt:integer)
+		<br>Called after thrown bag hits an entity.
+	- `callback_hit_bullet`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), count, bullet:[EntityProjectile](https://repentogon.com/EntityProjectile.html), bagData:[ThrownBagData](../classes/ThrownBagData.md))
+		<br>Called when the thrown bag hits an enemy bullet.
+	- `callback_hit_grid`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), count:integer, gridEntity:[GridEntity](https://repentogon.com/GridEntity.html), bagData:[ThrownBagData](../classes/ThrownBagData.md))
+		<br>Called when the thrown bag hits a grid entity.
+	- `callback_swing_pre_hit`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), count:integer, entity:[Entity](https://repentogon.com/Entity.html), player:[EntityPlayer](https://repentogon.com/EntityPlayer.html), bagData:[SwingingBagData](../classes/SwingingBagData.md))
+		<br>Called before thrown bag hits an entity while swinging.
+	- `callback_swing_post_hit`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), count:integer, entity:[Entity](https://repentogon.com/Entity.html), player:[EntityPlayer](https://repentogon.com/EntityPlayer.html), bagData:[SwingingBagData](../classes/SwingingBagData.md), dmgDealt:integer)
+		<br>Called after thrown bag hits an entity while swinging
+	- `callback_swing_hit_bullet`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), count:integer, bullet:[EntityProjectile](https://repentogon.com/EntityProjectile.html), player:[EntityPlayer](https://repentogon.com/EntityPlayer.html), bagData:[SwingingBagData](../classes/SwingingBagData.md))
+		<br>Called when thrown bag hits a projectile while swinging.
+	- `callback_unload`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), count:integer, bagData:[ThrownBagData](../classes/ThrownBagData.md))
+		<br>Called when the bag shoots out rocks.
+	- `callback_fall`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), count:integer, bagData:[ThrownBagData](../classes/ThrownBagData.md))
+		<br>Called when the bag falls to the ground.
+	- `callback_recall`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), count:integer, bagData:[ThrownBagData](../classes/ThrownBagData.md))
+		<br>Called when the bag is recalled.
+	- `callback_remove`: fun(bag:[EntityEffect](https://repentogon.com/EntityEffect.html), count:integer, bagData:[ThrownBagData](../classes/ThrownBagData.md))
+		<br>Called when the bag is removed.
+	- `callback_swing_update_combined`: fun(player:[EntityPlayer](https://repentogon.com/EntityPlayer.html), count:integer, combinedBagData:[BagData](../classes/BagData.md))
+		<br>Called every frame while the player is swinging any amount of bags. `combinedBagData` contains the contents of all bags the player is currently swinging, added together.
+	- `callback_swing_combined` fun(player:[EntityPlayer](https://repentogon.com/EntityPlayer.html), count:integer, combinedBagData:[BagData](../classes/BagData.md))
+		<br>Called when the player starts swinging any amount.
