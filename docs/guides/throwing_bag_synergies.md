@@ -1,5 +1,3 @@
-{% include-markdown "hidden/unfinished_notice.md" start="<!-- start -->" end="<!-- end -->" %}
-
 [Throwing Bag](https://tboiepiphany.wiki.gg/wiki/Throwing_Bag) is an active item that serves as [Tarnished Cain](https://tboiepiphany.wiki.gg/wiki/Tarnished_Cain)'s primary method of attacking, throwing the bag and needing to collect it to attack again. Throwing Bag can absorb two items in order to make additional bags to throw, each item contributing a unique effect to the bag it was crafted into. If the item is collected on its own, it may also provide a unique synergy to all of the player's bags.
 
 Epiphany's API allows for adding your own custom synergies for Throwing Bag. This guide will cover the large array of options available for customizing its effect.

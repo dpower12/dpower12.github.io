@@ -1,5 +1,3 @@
-{% include-markdown "hidden/unfinished_notice.md" start="<!-- start -->" end="<!-- end -->" %}
-
 [Turnover](https://tboiepiphany.wiki.gg/wiki/Turnover) is an active item from Epiphany that creates shops unique to the type of room it was created in, containing collectibles from the room's item pool (unique item pools have been made for special rooms that don't normally have one!). The shop can have any number of different levels from repeated uses of the active in the same room, which grant more pickups and items. These unique shops and their levels are also accompanied by their own Shopkeeper sprites for each level (Usually a maximum of 3 sprites). This guide covers how to add your own Turnover Shop for your own custom room.
 
 ## Adding your custom Turnover Shop
@@ -165,13 +163,3 @@ Turnover has callbacks for the following:
 - After a shop is created
 
 You can read more about these callbacks on the [ExtraCallbacks](../enums/Epiphany.ExtraCallbacks.md) page.
-
-## Custom Shopkeeper
-
-Currently, the shopkeepers that spawn for Turnover's shop layouts do not naturally support new sprites. They load with their assigned anm2 and, after being spawned, have their animation changed to the desired shopkeeper.
-
-This brief section provides code for adding your own custom shopkeeper to your Turnover shop:
-
-```Lua
-
-```
