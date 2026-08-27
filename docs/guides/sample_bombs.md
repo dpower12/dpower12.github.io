@@ -83,3 +83,10 @@ Epiphany.API:AddBombToSampleBombs(type: CollectibleType, body: string, hudSprite
 	Be sure not to use "Vanilla" or "Modded" for the ID, as these are used exclusively by Epiphany. Epiphany already adds support for a number of bomb synergies in various mods, seen at the top of this page.
 
 As a bonus for adding your bomb synergy as a sample bomb, it will also go towards the unlock condition for Bomb Sack, which in of itself unlocks sample bombs!
+
+## Spawning your sample bomb
+
+The unique setup of sample bombs has it so there is only a single bomb pickup entity involved. If you want to spawn a specific bomb such as your own for testing, do the following:
+
+1. Set Epiphany.FLAGS.Debug to `true` in the `flags.lua` file at the root of Epiphany's mod folder. It unlocks debug commands that are only registered on mod load.
+2. Use the debug command `epiphany_debug spawnsamplebomb` followed by the item ID of the bomb synergy you wish to spawn.
