@@ -4,6 +4,8 @@ nav:
   - Docs:
     - Mod Global: globals.md
     - Enums:
+      - "BagGFXPriority": enums/Epiphany.API.BagGFXPriority.md
+      - "BagSynergyFlags": enums/Epiphany.API.BagSynergyFlags.md
       - "CardGroup": enums/Epiphany.API.CardGroup.md
       - "HeartGroup": enums/Epiphany.API.HeartGroup.md
       - "SlotGroup": enums/Epiphany.API.SlotGroup.md
@@ -23,6 +25,7 @@ nav:
     - "ThrownBagData": classes/ThrownBagData.md
   - Guides:
     - "Adding a Character": guides/adding_a_character.md
+    - "Sample bombs": guides/sample_bombs.md
     - "Item pools": guides/item_pools.md
     - "Item tags": guides/item_tags.md
     - "Menu music": guides/menu_music.md
