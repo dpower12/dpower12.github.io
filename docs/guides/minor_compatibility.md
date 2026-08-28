@@ -46,7 +46,7 @@ There are a total of three characters that need a unique value out of heart pick
 Different values may assigned to a heart pickup across each character, depending on the context. The following functions can be used to assign a unique value to a pickup with variant `PickupVariant.PICKUP_HEART`, or `10`, but may optionally accept a different pickup variant:
 
 ???- info "Samson Token values"
-	List of vanilla hearts to their token value to server as a reference:
+	List of vanilla hearts to their token value to serve as a reference:
 
 	- HeartSubType.HEART_HALF = 20
 	- HeartSubType.HEART_FULL = 40
@@ -67,15 +67,15 @@ local exampleTable = {
 	[HeartSubType.HEART_FULL] = 2,
 	[HeartSubType.HEART_SOUL] = 4
 }
---Maggy should only exclusively use red hearts! Values are 1:1 with heart value
+--Maggy should only exclusively use red hearts! Values are 1:1 with units of health the heart grants.
 Epiphany.API:AddMaggyHeartValue(subtypeToValue: table, variant?: PickupVariant)
 --Tokens contributed are in multiples of 10 and depends on the "value" of the heart itself.
 Epiphany.API:AddSamsonHeartValue(subtypeToValue: table, variant?: PickupVariant)
---Exact
+--Values are 1:1 with units of health the heart grants.
 Epiphany.API:AddBethanyHeartValue(subtypeToValue: table, variant?: PickupVariant)
 ```
 
-If a heart's value may be different under different conditions, the following callbacks are available:
+If a heart's value may be different under different conditions, the following callbacks are available to change their value, or also prevent them from being consumed:
 
 - [MAGDALENE_PRE_CONSUME_HEART](../enums/Epiphany.ExtraCallbacks.md#magdalene_pre_consume_heart)
 - [SAMSON_PRE_CONSUME_HEART](../enums/Epiphany.ExtraCallbacks.md#samson_pre_consume_heart)
