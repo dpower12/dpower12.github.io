@@ -517,6 +517,19 @@ The optional argument is checked against the player's previous [PlayerType](http
 |:--|:--|:--|:--|
 |POST_PLAYERTYPE_CHANGE {: .copyable } | ([EntityPlayer](https://repentogon.com/EntityPlayer.html), [PlayerType](https://wofsauge.github.io/IsaacDocs/rep/enums/PlayerType.html) OldPlayerType) | [PlayerType](https://wofsauge.github.io/IsaacDocs/rep/enums/PlayerType.html) | void |
 
+### ESSENCE_OF_CAIN_REVERT_PEDESTAL {: .copyable }
+
+Called when Essence of Cain searches for pedestals to revert to chests or slot machines.
+
+Accepts returning a table of `{EntityType, Variant}` to successfully convert the pedestal, or `false` to prevent it from being converted.
+
+???+ note "EntityType"
+	The table return only accepts `EntityType.ENTITY_PICKUP` (intended for chests) and `EntityType.ENTITY_SLOT`. Otherwise, the return value will be ignored.
+
+|Name|Function Args|Optional Args|Return Type|
+|:--|:--|:--|:--|
+|ESSENCE_OF_CAIN_REVERT_PEDESTAL {: .copyable } | ([EntityPickup](https://repentogon.com/EntityPickup.html)) | - | table or boolean |
+
 ### CRIMSON_WISP_GROWTH {: .copyable }
 
 Called after a Crimson Wisp matures by one stage. Accepts no return arguments.
